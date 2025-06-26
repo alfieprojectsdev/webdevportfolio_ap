@@ -6,7 +6,7 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 
 ## 🏡 HomeHub Component Apps
 
-**What it is**: A set of modular web tools for streamlining [household tasks](https://apelicano.github.io/housechores/) — think laundry sorting, [pantry tracking](https://apelicano.github.io/homeinventorytracker/), or task reminders.
+**What it is**: A set of modular web tools for streamlining household tasks — think laundry sorting, [pantry tracking](https://apelicano.github.io/homeinventorytracker/), or [task reminders](https://apelicano.github.io/housechores/).
 
 **Why**: My family needed better workflows. This project let me experiment with UI/UX built around real-life friction points.
 
