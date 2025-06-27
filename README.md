@@ -47,12 +47,11 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 
 **What it is**: A printable worksheet generator for multi-digit addition problems — optimized for SPED and early grade school use.
 
-**Why**: One of my kid’s teachers needed window cards. Buying fixed sets at bookstores wasn’t cost-effective. If there's a printer in school, why not generate custom ones?
+**Why**: One of my kid’s teachers required window cards for the students. Buying fixed sets at bookstores wasn’t cost-effective. If there's a printer in school, why not generate custom ones?
 
 **Features**:
 - 4- to 6-digit addition problems
 - Adjustable font sizes (10x10 grid on A4 paper)
-- Auto-generated answer key (on page 2)
 - Visual separator between addends and answer line
 
 **Status**: [Fully working](https://apelicano.github.io/windowcards/) and in classroom use. Future polish may come based on teacher feedback.
