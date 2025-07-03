@@ -27,7 +27,7 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 - Booking and slot listing
 - (Coming soon) Calendar view and in-app messaging
 
-**Status**: [Actively developed](), serving as my main portfolio project for learning full-stack web dev.
+**Status**: Actively developed, serving as my main portfolio project for learning full-stack web dev.
 
 ---
 
