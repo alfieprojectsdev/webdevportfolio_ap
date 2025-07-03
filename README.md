@@ -50,11 +50,11 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 **Why**: One of my kid’s teachers required window cards for the students. Buying fixed sets at bookstores wasn’t cost-effective. If there's a printer in school, why not generate custom ones?
 
 **Features**:
-- 4- to 6-digit addition problems
+- 4- to 6-digit addition, subtraction, multiplication and division problems
 - Adjustable font sizes (10x10 grid on A4 paper)
 - Visual separator between addends and answer line
 
-**Status**: [Fully working](https://apelicano.github.io/windowcards/) and in classroom use. Future polish may come based on teacher feedback.
+**Status**: [Fully working](https://apelicano.github.io/windowcards/) and in classroom use. Ongoing updates based on teacher feedback.
 
 ---
 
@@ -63,4 +63,4 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 These are the current builds on my workbench. Each one reflects a small piece of daily life — whether at home, at school, or in a niche science field. I'm always improving things based on real-world use and feedback.
 
 ---
-👨‍💻 *Alfie Pelicano – Junior Web Developer | Might actually look into that meme about selling gonads for 1.7M USD to, um, for curiosity. Yeah, that's it.*
+👨‍💻 *Alfie Pelicano – Junior Web Developer | Once tracked the slow dance of tectonic plates. Now learning to make small, fast things on the web that help people move through their day.*
