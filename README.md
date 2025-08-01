@@ -63,4 +63,4 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 These are the current builds on my workbench. Each one reflects a small piece of daily life — whether at home, at school, or in a niche science field. I'm always improving things based on real-world use and feedback.
 
 ---
-👨‍💻 *Alfie Pelicano – Junior Web Developer | Once followed tectonic plates (of sorts). Now chasing responsive pixels.*
+👨‍💻 *Alfie Pelicano – Web Developer | JavaScript, React (Learning) | HTML/CSS | Scientific & Data-Driven Background | Growing Toward Full Stack*
