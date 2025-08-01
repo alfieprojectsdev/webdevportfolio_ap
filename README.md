@@ -43,9 +43,9 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 
 ---
 
-## ➕ Addition Window Card Generator (with Answer Key)
+## ➕ Math Operations Window Card Generator
 
-**What it is**: A printable worksheet generator for multi-digit addition problems — optimized for SPED and early grade school use.
+**What it is**: A printable worksheet generator for multi-digit addition/subtraction/multiplication/division problems — optimized for SPED and early grade school use.
 
 **Why**: One of my kid’s teachers required window cards for the students. Buying fixed sets at bookstores wasn’t cost-effective. If there's a printer in school, why not generate custom ones?
 
@@ -53,6 +53,8 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 - 4- to 6-digit addition, subtraction, multiplication and division problems
 - Adjustable font sizes (10x10 grid on A4 paper)
 - Visual separator between addends and answer line
+
+**Bonus**: Makes a decent case for budgeting a printer — even for underfunded schools. A single A4 sheet can serve up multiple problems per session, tailored to the day’s lesson. Print only what’s needed, when it’s needed — no waste, no bulk orders.
 
 **Status**: [Fully working](https://apelicano.github.io/windowcards/) and in classroom use. Ongoing updates based on teacher feedback.
 
