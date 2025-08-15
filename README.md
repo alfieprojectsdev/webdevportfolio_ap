@@ -6,7 +6,7 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 
 ## 🏡 HomeHub Component Apps
 
-**What it is**: A set of modular web tools for streamlining household tasks — think laundry sorting, [pantry tracking](https://apelicano.github.io/homeinventorytracker/), or [task reminders](https://apelicano.github.io/housechores/).
+**What it is**: A set of modular web tools for streamlining household tasks — think laundry sorting, [pantry tracking](https://alfieprojectsdev.github.io/homeinventorytracker/), or [task reminders](https://alfieprojectsdev.github.io/housechores/).
 
 **Why**: My family needed better workflows. This project let me experiment with UI/UX built around real-life friction points.
 
@@ -27,7 +27,7 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 - Booking and slot listing
 - (Coming soon) Calendar view and in-app messaging
 
-**Status**: [Actively developed](https://github.com/apelicano/parkingbooker), serving as my main portfolio project for learning full-stack web dev.
+**Status**: [Actively developed](https://github.com/alfieprojectsdev/parkingbooker), serving as my main portfolio project for learning full-stack web dev.
 
 ---
 
@@ -39,7 +39,7 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 
 **Reality check**: This isn’t a flashy startup pitch. Just filling a market gap with practical tech.
 
-**Status**: In planning/[prototyping stage](https://github.com/apelicano/pipetgo-mockup). Focus is on building a lean MVP.
+**Status**: In planning/[prototyping stage](https://github.com/alfieprojectsdev/pipetgo-mockup). Focus is on building a lean MVP.
 
 ---
 
@@ -56,7 +56,7 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 
 **Bonus**: Makes a decent case for budgeting a printer — even for underfunded schools. A single A4 sheet can serve up multiple problems per session, tailored to the day’s lesson. Print only what’s needed, when it’s needed — no waste, no bulk orders.
 
-**Status**: [Fully working](https://apelicano.github.io/windowcards/) and in classroom use. Ongoing updates based on teacher feedback.
+**Status**: [Fully working](https://alfieprojectsdev.github.io/windowcards/) and in classroom use. Ongoing updates based on teacher feedback.
 
 ---
 
