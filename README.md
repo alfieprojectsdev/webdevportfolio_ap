@@ -4,13 +4,21 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 
 ---
 
-## 🏡 HomeHub Component Apps
+## 🕵️‍♂️ JobHunter CLI
 
-**What it is**: A set of modular web tools for streamlining household tasks — think laundry sorting, [pantry tracking](https://alfieprojectsdev.github.io/homeinventorytracker/), or [task reminders](https://alfieprojectsdev.github.io/housechores/).
+**Stack**: Python (requests, BeautifulSoup, pandas)
 
-**Why**: My family needed better workflows. This project let me experiment with UI/UX built around real-life friction points.
+**What it is**: A command-line tool that scrapes company metadata and job postings from the open-source [`remoteintech/remote-jobs`](https://github.com/remoteintech/remote-jobs) repository.
 
-**Status**: Mostly exploratory, but some components might evolve into standalone apps.
+**Why**: To automate my own job search while also demonstrating scraping, crawling, and data automation skills in a clean portfolio-ready project.
+
+**Features**:
+- `scrape-metadata`: Extracts company names, websites, regions, remote status, and careers URLs into `companies.csv`.
+- `crawl-jobs`: Visits each careers page and scrapes job postings into `jobs.csv`.
+- Built for **local repo clones** (no ToS scraping issues).
+- Outputs structured CSV data for easy analysis or integration.
+
+**Status**: [Actively maintained](https://github.com/alfieprojectsdev/jobhunter), with plans to extend into ATS-specific crawlers (Greenhouse, Lever, Workable, etc.) and database-backed storage.
 
 ---
 
@@ -65,4 +73,7 @@ Welcome to my dev sandbox — a mix of real-world problem solving, family needs,
 These are the current builds on my workbench. Each one reflects a small piece of daily life — whether at home, at school, or in a niche science field. I'm always improving things based on real-world use and feedback.
 
 ---
-👨‍💻 *Alfie Pelicano – Web Developer | JavaScript, React (Learning) | HTML/CSS | Scientific & Data-Driven Background | Growing Toward Full Stack*
+
+## 👤 Author
+
+Alfie Pelicano -- I think and I code things | Bridging scientific workflows and modern web development
