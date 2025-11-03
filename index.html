@@ -199,7 +199,7 @@
                         <span class="tech-tag">CSS3</span>
                         <span class="tech-tag">Print CSS</span>
                     </div>
-                    <div class="project-links">
+                    <div class="demo-link">
                         <a href="https://alfieprojectsdev.github.io/windowcards/" target="_blank" class="project-link">
                             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M13 3l3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"/>
@@ -323,6 +323,42 @@
                 }
             });
         });
+
+        // GoatCounter event tracking
+        function trackEvent(eventName) {
+            if (window.goatcounter) {
+                window.goatcounter.count({
+                path: `/event/${eventName}`,
+                title: eventName,
+                event: true
+                });
+            }
+        }
+
+        // Track project card clicks
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                const projectName = card.dataset.project; // e.g., data-project="pipetgo"
+                trackEvent(`project-card-${projectName}`);
+            });
+        });
+
+        // Track external links
+        document.querySelectorAll('a[href^="https://github.com"]').forEach(link => {
+            link.addEventListener('click', () => {
+                trackEvent('github-link-clicked');
+            });
+        });
+
+        document.querySelectorAll('.demo-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const projectName = link.dataset.project;
+                trackEvent(`demo-clicked-${projectName}`);
+            });
+        });
     </script>
+    <!-- Add GoatCounter tracking -->
+    <script data-goatcounter="https://ithinkandicode.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
