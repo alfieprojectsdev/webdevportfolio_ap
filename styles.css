@@ -35,6 +35,113 @@ body {
     padding: 0 24px;
 }
 
+/* Enhanced Focus States for Accessibility */
+*:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Skip Navigation Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Navigation Menu */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.nav.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav.scrolled .nav-logo {
+    color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 4px 8px;
+}
+
+.nav.scrolled .nav-link {
+    color: var(--text-primary);
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav.scrolled .nav-link:hover {
+    color: var(--primary-dark);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-toggle span {
+    width: 24px;
+    height: 3px;
+    background: white;
+    transition: background 0.3s;
+}
+
+.nav.scrolled .nav-toggle span {
+    background: var(--text-primary);
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -367,6 +474,91 @@ body {
     font-weight: bold;
 }
 
+/* Contact Section */
+.contact {
+    padding: 80px 0;
+    background: var(--bg-primary);
+    text-align: center;
+}
+
+.contact-tagline {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 48px;
+    line-height: 1.7;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+}
+
+.contact-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-link svg {
+    flex-shrink: 0;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-4px);
+}
+
 /* Footer */
 .footer {
     background: var(--text-primary);
@@ -393,8 +585,50 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Navigation Mobile Menu */
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: white;
+        padding: 24px;
+        gap: 16px;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav.scrolled .nav-menu,
+    .nav-menu {
+        background: white;
+    }
+
+    .nav-link {
+        color: var(--text-primary);
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    .nav-link:hover {
+        background: var(--bg-secondary);
+    }
+
     .hero {
-        padding: 80px 0 60px;
+        padding: 100px 0 60px;
     }
 
     .hero-title {
@@ -419,6 +653,17 @@ body {
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-methods {
+        padding: 0 24px;
+    }
+
+    .back-to-top {
+        bottom: 24px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
     }
 }
 
