@@ -376,6 +376,82 @@
                         </a>
                     </div>
                 </article>
+
+                <!-- NightCoder Orchestrator -->
+                <article class="project-card" data-project="nightcoder">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <div class="project-status status-active">Active Development</div>
+                    </div>
+                    <h3 class="project-title">NightCoder Orchestrator</h3>
+                    <p class="project-description">
+                        Python-based automation engine that reads ADRs, generates structured implementation plans, and produces git-style patches using local LLMs (via Ollama).
+                    </p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Problem:</span>
+                            <span class="detail-value">Engineering tasks tied to ADRs required repetitive planning and manual patch authoring across multiple repos — slow, error-prone, and inconsistent.</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Solution:</span>
+                            <span class="detail-value">A multi-agent runner that scans ADRs, synthesizes a step-by-step plan, generates patches, logs runs, and optionally applies changes through a safety-gated workflow.</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Stage:</span>
+                            <span class="detail-value">Phase 2/4 — stable planner/coder loop; refining patch validation and multi-repo robustness.</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python 3.11+</span>
+                        <span class="tech-tag">Ollama API</span>
+                        <span class="tech-tag">Shell Scripts</span>
+                        <span class="tech-tag">JSON Config</span>
+                    </div>
+                    <!-- GitHub link intentionally hidden for now -->
+                    <!--
+                    <div class="project-links">
+                        <a href="sandbox:/mnt/data/nightcoder_orchestrator.py" target="_blank" class="project-link">View Code</a>
+                    </div>
+                    -->
+                </article>
+
+                <!-- SciWriter Orchestrator -->
+                <article class="project-card" data-project="sciwriter">
+                    <div class="project-header">
+                        <div class="project-icon">📄</div>
+                        <div class="project-status status-active">Active Development</div>
+                    </div>
+                    <h3 class="project-title">SciWriter Orchestrator</h3>
+                    <p class="project-description">
+                        Automated writing pipeline that converts research notes into structured drafts — with refinement passes, terminology checks, LaTeX export, and optional slide generation.
+                    </p>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Problem:</span>
+                            <span class="detail-value">Drafting scientific manuscripts from scratch is slow, inconsistent, and prone to terminology drift across revisions.</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Solution:</span>
+                            <span class="detail-value">A configurable multi-stage workflow that generates a draft, performs iterative refinement, normalizes terminology, and outputs LaTeX or slide formats.</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Stage:</span>
+                            <span class="detail-value">Phase 2/4 — pipeline functional with draft/refine/terminology steps; improving LaTeX and slide output consistency.</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python 3.11+</span>
+                        <span class="tech-tag">Shell Scripts</span>
+                        <span class="tech-tag">LaTeX (optional)</span>
+                        <span class="tech-tag">JSON Config</span>
+                    </div>
+                    <!-- GitHub link intentionally hidden for now -->
+                    <!--
+                    <div class="project-links">
+                        <a href="sandbox:/mnt/data/sciwriter_orchestrator.py" target="_blank" class="project-link">View Script</a>
+                    </div>
+                    -->
+                </article>
             </div>
         </div>
     </section>
