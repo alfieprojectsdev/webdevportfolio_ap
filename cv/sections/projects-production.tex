@@ -1,0 +1,76 @@
+%% Production Applications
+
+\cventry{2024--Present}{PipetGo -- B2B Laboratory Testing Marketplace}{\textit{Next.js 14.2 · React 18 · TypeScript · PostgreSQL (Neon) · Prisma · NextAuth · Vitest · Playwright}}{}{}{%
+Production RFQ platform connecting businesses with ISO 17025 certified labs across the Philippines. Implements multi-role authorization (CLIENT, LAB\_ADMIN, ADMIN) with quotation workflow from request to fulfillment.
+\begin{itemize}
+\item 233 passing tests (Vitest + Playwright E2E)
+\item Request-for-Quote system with three pricing modes (QUOTE\_REQUIRED, FIXED, HYBRID)
+\item File upload system (UploadThing) for specifications and test results
+\item Zod validation schemas for all API endpoints
+\item Session-based authentication with NextAuth 4.24.7
+\item Dual-mode testing (mock DB with pg-mem + live PostgreSQL)
+\end{itemize}
+\textbf{Impact:} Centralized directory of accredited labs replacing scattered, outdated data sources.\\
+\textbf{Repository:} \url{https://github.com/alfieprojectsdev/pipetgo}
+}
+
+\vspace{0.5em}
+
+\cventry{2024--Present}{Washboard -- Car Wash Queue Management System}{\textit{Next.js 14 · TypeScript · PostgreSQL (NeonDB) · Session Auth · Vitest · pg-mem}}{}{}{%
+Production deployment at \url{washboard.ithinkandicode.space} replacing manual pen-and-paper queue tracking with contactless QR bookings and real-time dashboard.
+\begin{itemize}
+\item 130/130 tests passing with 3-5 second execution time
+\item 94/100 security audit score
+\item WCAG 2.1 AA accessibility compliant
+\item Layered architecture: API → Service → Database
+\item Transaction-safe queue management (SERIALIZABLE isolation level)
+\item Magic link system with 128-character cryptographically secure tokens
+\item Timing-safe token comparison (security best practice)
+\end{itemize}
+\textbf{Impact:} Piloting with car wash operators; eliminated manual position tracking and reduced peak-hour wait confusion.\\
+\textbf{Live Demo:} \url{https://washboard.ithinkandicode.space}
+}
+
+\vspace{0.5em}
+
+\cventry{2024}{Parkboard -- Peer-to-Peer Parking Marketplace}{\textit{Next.js 14 · TypeScript · PostgreSQL (Neon) · NextAuth v5 · Tailwind + shadcn/ui · Jest · Playwright}}{}{}{%
+Production-ready MVP for community parking slot sharing with flexible scheduling and real-time availability.
+\begin{itemize}
+\item 85\% test coverage (158 unit tests, 8 E2E scenarios)
+\item Database-level overlap prevention (PostgreSQL EXCLUDE constraints)
+\item Server-side price calculation via database triggers (never trust client)
+\item Row Level Security (RLS) policies for multi-tenant data isolation
+\item Idempotent database migrations for safe schema evolution
+\item NextAuth.js v5 with email/password + OAuth support
+\end{itemize}
+\textbf{Impact:} Deployed for LMR residential community, replacing disorganized chat-based coordination.\\
+\textbf{Deployment:} parkboard.app/LMR (community access)
+}
+
+\vspace{0.5em}
+
+\cventry{2024}{Carpool Coordinator}{\textit{Node.js · Express · PostgreSQL · Vanilla JavaScript · HTML5 · CSS3}}{}{}{%
+Production deployment on Render for Phirst Park Homes community carpooling.
+\begin{itemize}
+\item Structured posting system with route matching (Dau, Cubao, BGC, Manila)
+\item Contact integration (Messenger, Viber, Phone, Telegram)
+\item RESTful API with PostgreSQL backend
+\item Responsive design for mobile-first user base
+\end{itemize}
+\textbf{Impact:} Improved participation rates and reduced coordination time for parents and commuters.\\
+\textbf{Repository:} \url{https://github.com/alfieprojectsdev/carpool-app}
+}
+
+\vspace{0.5em}
+
+\cventry{2023--Present}{Window Cards Generator -- Math Worksheet Tool}{\textit{Vanilla JavaScript · HTML5 · CSS3 · Print CSS}}{}{}{%
+Production tool for SPED and primary educators generating customizable arithmetic worksheets.
+\begin{itemize}
+\item Client-side only (no server dependency)
+\item Auto-generated answer keys
+\item Configurable operand lengths (4-6 digits), all four operations
+\item Iteratively refined based on real teacher feedback
+\end{itemize}
+\textbf{Impact:} Used in classrooms as free alternative to commercial workbook sets.\\
+\textbf{Live Demo:} \url{https://alfieprojectsdev.github.io/windowcards}
+}

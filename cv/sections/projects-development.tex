@@ -1,0 +1,41 @@
+%% Active Development Projects
+
+\cventry{2024--Present}{Drive Archaeologist -- GNSS Data Organization CLI}{\textit{Python 3.11+ · Click CLI · Rich Terminal · Pandas · Pytest}}{}{}{%
+Phase 1/4 implementation for excavating and organizing decades of legacy GNSS data from old drives with inconsistent structures.
+\begin{itemize}
+\item RINEX file type detection with regex pattern matching
+\item MD5-based duplicate detection across drives
+\item Resume capability for long-running scans (progress tracking)
+\item Non-destructive by design (dry-run first, generate migration scripts)
+\item Designed for PHIVOLCS (Philippine Institute of Volcanology and Seismology)
+\end{itemize}
+\textbf{Target Users:} Geodesists, geophysicists managing legacy scientific archives\\
+\textbf{Repository:} \url{https://github.com/alfieprojectsdev/drive-archaeologist}
+}
+
+\vspace{0.5em}
+
+\cventry{2024--Present}{NightCoder Orchestrator -- ADR-to-Patch Automation}{\textit{Python 3.11+ · Ollama · deepseek-r1 (14B) · qwen2.5-coder (14B) · Shell Scripting}}{}{}{%
+Phase 3/4 production-ready multi-agent automation engine that reads Architecture Decision Records (ADRs), generates implementation plans, and produces git-style patches using local LLMs.
+\begin{itemize}
+\item Multi-agent workflow: ADR parsing → Plan synthesis → Patch generation
+\item Local LLM orchestration via Ollama (no API costs)
+\item 95\% plan quality, 90\% patch cleanliness (validated)
+\item Safety-gated workflow with error handling
+\item Portable configuration for cross-repo use
+\end{itemize}
+\textbf{Impact:} Recent optimizations achieved production-ready reliability for automated patch generation.
+}
+
+\vspace{0.5em}
+
+\cventry{2024--Present}{SciWriter Orchestrator -- Research Writing Pipeline}{\textit{Python 3.11+ · Ollama · qwen2.5 (3B Instruct) · LaTeX · Beamer}}{}{}{%
+Phase 2/4 automated writing pipeline converting research notes into structured drafts with refinement passes, terminology checks, and LaTeX export.
+\begin{itemize}
+\item Multi-stage workflow: draft → refine → terminology normalization → export
+\item LaTeX and Beamer slide generation
+\item Terminology database (JSON) for consistency
+\item Config-driven pipeline for customization
+\end{itemize}
+\textbf{Status:} Pipeline functional, improving output consistency for academic paper generation.
+}
