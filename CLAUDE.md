@@ -1,39 +1,48 @@
-# CLAUDE.md - Landing Page Portfolio
+# CLAUDE.md
 
-**Project:** webdevportfolio_ap (Landing Page)
-**Location:** `/home/ltpt420/repos/landingpage/`
-**Purpose:** Professional portfolio website showcasing real projects
-**Tech Stack:** HTML5, CSS3, Vanilla JavaScript
-**Deployment:** GitHub Pages
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ---
 
 ## Project Overview
 
-This is a professional portfolio landing page showcasing Alfie Pelicano's web development projects. It features:
+Static portfolio website showcasing Alfie Pelicano's web development projects. Pure HTML/CSS/JS — no build tools, no frameworks. Deployed to GitHub Pages with custom domain.
 
-- **Parkboard** - Condo parking marketplace (In Production)
-- **PipetGo** - B2B lab services marketplace (Active Development)
-- **Carpool Coordinator** - School carpool platform (Planning)
+**Live URL:** https://ithinkandicode.space
+**GitHub Pages URL:** https://alfieprojectsdev.github.io/webdevportfolio_ap/
+
+### Featured Projects
+
+The site currently showcases:
+- **PipetGo** - RFQ-based B2B lab services marketplace (not e-commerce) supporting three pricing modes (QUOTE_REQUIRED, FIXED, HYBRID) with multi-role authorization (In Production / UAT)
+- **Carpool Coordinator** - Community carpooling platform (In Production)
 - **Window Cards Generator** - Math worksheet generator (In Production)
+- **Washboard** - Car wash queue/booking system (In Production)
+- **Drive Archaeologist** - GNSS data organization CLI (Active Development)
+- **NightCoder Orchestrator** - ADR-to-patch automation with local LLMs (Active Development)
+- **SciWriter Orchestrator** - Research note to manuscript pipeline (Active Development)
 
-**Design Philosophy:** Clean, professional, accessible, and performance-focused.
+**Note:** Parkboard was temporarily removed (commented out in index.html:116-156) — refactoring in progress.
 
 ---
 
-## Technology Stack
+## Tech Stack
 
 **Frontend:**
 - HTML5 (semantic markup)
 - CSS3 (custom properties, Grid, Flexbox)
-- Vanilla JavaScript (no frameworks - keep it light)
+- Vanilla JavaScript (no build step)
 
 **Typography:**
-- Google Fonts: Inter (primary font family)
+- Google Fonts: Inter
+
+**Analytics:**
+- GoatCounter (privacy-friendly, no cookies) - https://ithinkandicode.goatcounter.com/
 
 **Deployment:**
-- GitHub Pages (static hosting)
-- Custom domain: TBD
+- GitHub Pages (automatic on push to `main`)
+- Custom domain via Porkbun DNS
+- HTTPS via Let's Encrypt (GitHub-managed)
 
 ---
 
@@ -41,278 +50,367 @@ This is a professional portfolio landing page showcasing Alfie Pelicano's web de
 
 ```
 landingpage/
-├── index.html           # Main landing page
-├── styles.css           # All styling (no CSS frameworks)
-├── README.md            # Project documentation
-├── .claude/             # Claude Code configuration
-│   ├── agents/          # Symlinked from claude-config
-│   └── commands/        # Symlinked from claude-config
-└── CLAUDE.md            # This file
+├── index.html              # Main landing page (single-page site)
+├── styles.css              # All styling (CSS custom properties in :root)
+├── assets/
+│   ├── screenshots/        # Project screenshots (e.g., Washboard dashboard)
+│   └── blog/               # Blog content (Markdown files)
+├── docs/
+│   ├── DEPLOY.md           # Deployment guide (GitHub Pages + Porkbun DNS)
+│   └── WEB_CLAUDE_INSTRUCTIONS.md
+├── .claude/                # Claude Code configuration
+│   ├── agents/             # Custom agent definitions
+│   └── commands/           # Custom slash commands
+├── CLAUDE.md               # This file
+└── README.md               # Project documentation
 ```
+
+**Key Files:**
+- **index.html** (~44KB): Single-page site with inline JavaScript for navigation, smooth scrolling, GoatCounter event tracking
+- **styles.css** (~14KB): All styling using CSS custom properties (see `:root` for design tokens)
 
 ---
 
 ## Design System
 
-### Color Palette
+### CSS Custom Properties (Design Tokens)
+
+All colors and spacing defined in `styles.css` `:root`:
 
 ```css
---primary: #2563eb         /* Primary blue */
---primary-dark: #1e40af    /* Dark blue */
+--primary: #2563eb         /* Primary blue - links, buttons */
+--primary-dark: #1e40af    /* Hover states */
 --secondary: #64748b       /* Slate gray */
---text-primary: #0f172a    /* Almost black */
---text-secondary: #475569  /* Dark gray */
---bg-primary: #ffffff      /* White */
---bg-secondary: #f8fafc    /* Light gray */
---bg-tertiary: #f1f5f9     /* Lighter gray */
---border: #e2e8f0          /* Border color */
---success: #10b981         /* Green */
---warning: #f59e0b         /* Orange */
---info: #3b82f6            /* Blue */
+--text-primary: #0f172a    /* Body text */
+--text-secondary: #475569  /* Muted text */
+--bg-primary: #ffffff      /* Main background */
+--bg-secondary: #f8fafc    /* Section backgrounds */
+--bg-tertiary: #f1f5f9     /* Cards */
+--border: #e2e8f0          /* Borders */
+--success: #10b981         /* "In Production" badges */
+--warning: #f59e0b         /* "Planning" badges */
+--info: #3b82f6            /* "Active Development" badges */
 ```
 
-### Typography Scale
-
-- **Hero Title:** 3.5rem (56px)
-- **Hero Subtitle:** 1.5rem (24px)
-- **Section Title:** 2.5rem (40px)
-- **Project Title:** 1.5rem (24px)
-- **Body:** 1.125rem (18px)
-- **Small:** 0.875rem (14px)
-
-### Spacing System
-
-- **Section Padding:** 80px vertical
-- **Card Padding:** 32px
-- **Grid Gap:** 32px
-- **Element Gap:** 16px
-
----
-
-## Project Cards Structure
-
-Each project card includes:
-
-1. **Header:** Icon + Status badge
-2. **Title:** Project name
-3. **Description:** 2-3 sentence overview
-4. **Details Section:**
-   - Problem being solved
-   - Solution implemented
-   - Current impact/stage
-5. **Tech Stack:** Technology tags
-6. **Links:** GitHub + Live Demo (if applicable)
-
-**Status Types:**
-- `In Production` - Live and being used (green)
-- `Active Development` - Currently being built (blue)
-- `Planning` - In design/planning phase (yellow)
-
----
-
-## Responsive Breakpoints
+### Responsive Breakpoints
 
 ```css
-/* Desktop: Default (1200px+ container) */
+/* Desktop: Default (max-width: 1200px container) */
 /* Tablet: 768px and below */
 /* Mobile: 480px and below */
 ```
 
-**Responsive Behavior:**
-- Hero: Font sizes scale down on mobile
-- Projects Grid: Stacks to single column on mobile
-- Skills Grid: Stacks to single column on tablet
-- Buttons: Full width on mobile
-
----
-
-## Performance Optimization
-
-**Loading Strategy:**
-- Critical CSS inline (if needed)
-- Google Fonts with `preconnect`
-- Smooth scrolling with JavaScript
-- No heavy frameworks (pure vanilla JS)
-
-**Target Metrics:**
-- Lighthouse Performance: 95+
-- First Contentful Paint: <1.5s
-- Time to Interactive: <2.5s
-- Total Bundle Size: <50KB
-
----
-
-## Accessibility Standards
-
-**WCAG 2.1 AA Compliance:**
-- Semantic HTML5 elements
-- Proper heading hierarchy (h1 → h2 → h3)
-- Sufficient color contrast (4.5:1 minimum)
-- Keyboard navigation support
-- Focus states on interactive elements
-- Alt text for future images
+Navigation, hero, project grid, and skills grid all respond to these breakpoints.
 
 ---
 
 ## Development Workflow
 
-### Making Changes
+### Local Development
 
-1. **Edit HTML/CSS** in respective files
-2. **Test locally:** Open `index.html` in browser
-3. **Commit changes** with descriptive messages
-4. **Push to GitHub** - Auto-deploys to GitHub Pages
+1. **Edit HTML/CSS** directly in `index.html` and `styles.css`
+2. **Test locally:** Open `index.html` in browser (no server needed)
+3. **Commit and push** to `main` branch
+
+### Deployment
+
+**Automatic:** Every push to `main` triggers GitHub Pages rebuild (~1-2 minutes).
+
+**Deployment configuration:**
+- Source: `main` branch, root directory
+- Custom domain managed via `CNAME` file (auto-created by GitHub)
+- DNS records on Porkbun point to GitHub Pages IPs (see docs/DEPLOY.md)
 
 ### Testing Checklist
 
 Before committing:
-- [ ] Test in Chrome, Firefox, Safari
-- [ ] Test responsive design (mobile, tablet, desktop)
-- [ ] Validate HTML (https://validator.w3.org/)
-- [ ] Check accessibility (Lighthouse, WAVE)
-- [ ] Verify all links work
-- [ ] Check smooth scrolling
+- Test in multiple browsers (Chrome, Firefox, Safari)
+- Test responsive design (mobile, tablet, desktop)
+- Validate HTML: https://validator.w3.org/
+- Check accessibility: Lighthouse (target 95+), WAVE
+- Verify all external links work
+- Check smooth scrolling behavior
+- Test mobile menu toggle
 
 ---
 
-## Deployment to GitHub Pages
+## Content Management
 
-**Setup:**
-```bash
-# Ensure on main branch
-git checkout main
+### Adding a New Project Card
 
-# Push to GitHub
-git push origin main
+1. **Add to index.html** under `<section id="projects">`:
 
-# Enable GitHub Pages in repo settings:
-# Settings → Pages → Source: main branch → /root
+```html
+<article class="project-card" data-project="project-slug">
+    <div class="project-header">
+        <div class="project-icon">🔬</div>
+        <div class="project-status status-production">In Production</div>
+    </div>
+    <h3 class="project-title">Project Name</h3>
+    <p class="project-description">Brief 1-2 sentence description</p>
+    <div class="project-details">
+        <div class="detail-item">
+            <span class="detail-label">Problem:</span>
+            <span class="detail-value">What problem does this solve?</span>
+        </div>
+        <div class="detail-item">
+            <span class="detail-label">Solution:</span>
+            <span class="detail-value">How does it solve it?</span>
+        </div>
+        <div class="detail-item">
+            <span class="detail-label">Impact/Stage:</span>
+            <span class="detail-value">Current status or impact</span>
+        </div>
+    </div>
+    <div class="tech-stack">
+        <span class="tech-tag">Next.js</span>
+        <span class="tech-tag">TypeScript</span>
+    </div>
+    <div class="project-links">
+        <a href="https://github.com/alfieprojectsdev/repo" target="_blank" class="project-link">
+            <!-- GitHub SVG icon -->
+            View Code
+        </a>
+    </div>
+</article>
 ```
 
-**URL:** `https://alfieprojectsdev.github.io/webdevportfolio_ap/`
+2. **Status badge classes:**
+   - `status-production` (green) - Live and being used
+   - `status-active` (blue) - Currently being built
+   - `status-planning` (yellow/orange) - In design/planning
 
----
-
-## Content Update Guidelines
-
-### Adding a New Project
-
-1. Add new `<article class="project-card">` in `index.html`
-2. Include all required sections:
-   - Icon, status badge
-   - Title, description
-   - Problem/Solution/Impact details
-   - Tech stack tags
-   - Links (GitHub + demo)
-3. Update README.md if needed
+3. **GoatCounter tracking:** The `data-project="slug"` attribute enables click tracking (see inline JS at bottom of index.html)
 
 ### Updating Project Status
 
-**Status changes:**
-- `Planning` → `Active Development` → `In Production`
+**Status progression:** Planning → Active Development → In Production
 
-Update both:
-- Status badge class (`status-planning`, `status-active`, `status-production`)
-- Badge text
+**To update:**
+1. Change status badge class: `class="project-status status-[production|active|planning]"`
+2. Update badge text to match
+3. Update "Impact/Stage" detail section text
 
----
+### Adding Project Screenshots
 
-## Future Enhancements
+See Washboard card (index.html:289-298) for example:
 
-**Phase 2 (Optional):**
-- [ ] Add project screenshots/videos
-- [ ] Blog section for technical write-ups
-- [ ] Contact form
-- [ ] Dark mode toggle
-- [ ] Analytics (GoatCounter - privacy-friendly)
-- [ ] Case studies for each project
+```html
+<div class="project-screenshot">
+    <img
+        src="assets/screenshots/project/image-thumb.png"
+        alt="Descriptive alt text"
+        loading="lazy"
+        width="600"
+        height="400"
+    >
+</div>
+```
 
-**Phase 3 (If needed):**
-- [ ] Convert to Next.js for better SEO
-- [ ] Add CMS for easier content updates
-- [ ] Custom domain setup
-
----
-
-## Agent Usage Guidelines
-
-### When to Use Specific Agents
-
-**@architect:**
-- Planning new sections/features
-- Restructuring content hierarchy
-- Accessibility improvements
-
-**@developer:**
-- Implementing new features
-- Refactoring CSS
-- Adding JavaScript functionality
-
-**@ux-reviewer:**
-- Reviewing accessibility
-- Evaluating user flow
-- Checking responsive design
-
-**@technical-writer:**
-- Updating this CLAUDE.md
-- Writing project descriptions
-- Creating documentation
+Place above `<div class="project-header">`. Use `loading="lazy"` for performance.
 
 ---
 
-## Root Instance Coordination
+## JavaScript Functionality
 
-**Project Status:** Active - Portfolio Development
-**Priority:** Medium (after pipetgo Phase 4)
+All JavaScript is inline in `index.html` (lines 597-686). No external JS files.
 
-**Coordination Files:**
-- `/home/ltpt420/repos/claude-config/coordination/project-status/landingpage-status.md` (to be created)
+**Key behaviors:**
+1. **Navigation scroll state** (lines 598-606): Adds `.scrolled` class to nav when scrollY > 50px
+2. **Mobile menu toggle** (lines 608-626): Hamburger menu for mobile
+3. **Back to top button** (lines 628-641): Appears when scrollY > 500px
+4. **Smooth scrolling** (lines 643-652): For anchor links
+5. **GoatCounter event tracking** (lines 654-685):
+   - Project card clicks
+   - GitHub link clicks
+   - Demo link clicks
 
-**Escalation Triggers:**
-- Design decisions requiring user input
-- Major structure changes
-- Deployment issues
+**No modification needed** unless adding new interactive features.
+
+---
+
+## Accessibility Standards
+
+**WCAG 2.1 AA compliance:**
+- Semantic HTML5 elements (`<nav>`, `<section>`, `<article>`, etc.)
+- Proper heading hierarchy (single `<h1>` → `<h2>` → `<h3>`)
+- Color contrast ratios meet 4.5:1 minimum
+- Keyboard navigation support (all interactive elements focusable)
+- Enhanced focus states (`:focus-visible` with 3px outline)
+- Skip navigation link (lines 60-61 in index.html)
+- `aria-label` and `aria-expanded` on mobile menu toggle
+- `aria-hidden="true"` on decorative SVG icons
+
+**Lighthouse targets:**
+- Performance: 95+
+- Accessibility: 95+
+- Best Practices: 95+
+- SEO: 95+
 
 ---
 
 ## Git Workflow
 
-**Branching Strategy:** Simple main branch (no feature branches needed for small portfolio)
+**Branching:** Simple main-only workflow (no feature branches needed for portfolio site)
 
-**Commit Message Format:**
+**Commit message format:**
 ```
 <type>: <description>
 
-Examples:
-feat: add new project card for Drive Archaeologist
-fix: correct responsive layout on mobile
-style: improve project card hover effects
-docs: update CLAUDE.md with deployment instructions
+Types:
+- feat: new feature or project card
+- fix: bug fix
+- style: CSS/design changes
+- chore: project status updates, content tweaks
+- docs: documentation updates
 ```
+
+**Recent examples:**
+```
+chore: set PipetGo status to In Prod
+feat: add Washboard hero screenshot to project card
+chore: temporarily remove Parkboard card from portfolio
+```
+
+---
+
+## Performance Considerations
+
+**Current bundle size:** ~58KB total (44KB HTML + 14KB CSS)
+
+**Optimization strategies:**
+- No JavaScript frameworks (vanilla JS only)
+- Google Fonts loaded via `preconnect` for faster DNS resolution
+- Images use `loading="lazy"` attribute
+- Minimal CSS (no frameworks like Tailwind)
+- Single-page site (no routing overhead)
+
+**Target metrics:**
+- First Contentful Paint: <1.5s
+- Time to Interactive: <2.5s
+- Lighthouse Performance: 95+
+
+---
+
+## Special Considerations
+
+### Projects Without GitHub Links
+
+Some projects (NightCoder Orchestrator, SciWriter Orchestrator) intentionally have no GitHub links — comment `<!-- GitHub link intentionally hidden -->` marks these.
+
+### Commented-Out Content
+
+Parkboard project card is commented out (index.html:116-156) — refactoring in progress. Do not delete; may be restored later.
+
+### Blog Integration
+
+Blog link in navigation points to external site: https://blog.ithinkandicode.space
+
+Local blog content in `assets/blog/` is not currently used in production.
 
 ---
 
 ## Quality Standards
 
-**Before Committing:**
-- [ ] HTML validates (https://validator.w3.org/)
-- [ ] CSS is clean (no unused rules)
-- [ ] Links are functional
-- [ ] Responsive on all breakpoints
-- [ ] Lighthouse score 95+ (Performance, Accessibility)
-- [ ] No console errors
+**Before committing:**
+- HTML validates (https://validator.w3.org/)
+- No broken links (internal or external)
+- Responsive on all breakpoints (mobile, tablet, desktop)
+- Lighthouse score 95+ across all categories
+- No console errors or warnings
+- Smooth scrolling works
+- Mobile menu toggles correctly
+
+---
+
+## Using Gemini CLI for Large Codebase Analysis
+
+When analyzing large codebases or multiple files that might exceed context limits, use the Gemini CLI with its massive context window. Use `gemini -p` to leverage Google Gemini's large context capacity.
+
+### File and Directory Inclusion Syntax
+
+Use the `@` syntax to include files and directories in your Gemini prompts. The paths should be relative to WHERE you run the gemini command:
+
+**Examples:**
+
+```bash
+# Single file analysis
+gemini -p "@src/main.py Explain this file's purpose and structure"
+
+# Multiple files
+gemini -p "@package.json @src/index.js Analyze the dependencies used in the code"
+
+# Entire directory
+gemini -p "@src/ Summarize the architecture of this codebase"
+
+# Multiple directories
+gemini -p "@src/ @tests/ Analyze test coverage for the source code"
+
+# Current directory and subdirectories
+gemini -p "@./ Give me an overview of this entire project"
+
+# Or use --all_files flag
+gemini --all_files -p "Analyze the project structure and dependencies"
+```
+
+### Implementation Verification Examples
+
+```bash
+# Check if a feature is implemented
+gemini -p "@src/ @lib/ Has dark mode been implemented in this codebase? Show me the relevant files and functions"
+
+# Verify authentication implementation
+gemini -p "@src/ @middleware/ Is JWT authentication implemented? List all auth-related endpoints and middleware"
+
+# Check for specific patterns
+gemini -p "@src/ Are there any React hooks that handle WebSocket connections? List them with file paths"
+
+# Verify error handling
+gemini -p "@src/ @api/ Is proper error handling implemented for all API endpoints? Show examples of try-catch blocks"
+
+# Check for rate limiting
+gemini -p "@backend/ @middleware/ Is rate limiting implemented for the API? Show the implementation details"
+
+# Verify caching strategy
+gemini -p "@src/ @lib/ @services/ Is Redis caching implemented? List all cache-related functions and their usage"
+
+# Check for specific security measures
+gemini -p "@src/ @api/ Are SQL injection protections implemented? Show how user inputs are sanitized"
+
+# Verify test coverage for features
+gemini -p "@src/payment/ @tests/ Is the payment processing module fully tested? List all test cases"
+```
+
+### When to Use Gemini CLI
+
+Use `gemini -p` when:
+- Analyzing entire codebases or large directories
+- Comparing multiple large files
+- Need to understand project-wide patterns or architecture
+- Current context window is insufficient for the task
+- Working with files totaling more than 100KB
+- Verifying if specific features, patterns, or security measures are implemented
+- Checking for the presence of certain coding patterns across the entire codebase
+
+### Important Notes
+
+- Paths in `@` syntax are relative to your current working directory when invoking gemini
+- The CLI will include file contents directly in the context
+- No need for `--yolo` flag for read-only analysis
+- Gemini's context window can handle entire codebases that would overflow Claude's context
+- When checking implementations, be specific about what you're looking for to get accurate results
 
 ---
 
 ## Notes
 
-- **Keep it simple:** No frameworks needed - vanilla HTML/CSS/JS is perfect for this
-- **Performance first:** Static site should be blazing fast
-- **Content over code:** Focus on showcasing projects clearly
-- **Mobile-first:** Many recruiters view portfolios on mobile
+- **Keep it simple:** This is intentionally a static site with no build tools. Do not add npm, Webpack, or other tooling.
+- **Performance first:** Static HTML/CSS/JS should load fast (<2s TTI).
+- **Content over code:** Focus on showcasing projects clearly, not adding fancy features.
+- **Mobile matters:** Many recruiters/clients view portfolios on mobile devices.
 
 ---
 
-**Last Updated:** 2025-11-02
+**Last Updated:** 2025-12-11
 **Maintained By:** Alfie Pelicano
-**Claude Instance:** landingpage-specific (coordinated with root)
+**Repository:** https://github.com/alfieprojectsdev/webdevportfolio_ap
