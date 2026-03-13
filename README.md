@@ -33,7 +33,7 @@ I work at the intersection of earth science and software engineering — process
 |---|---|---|
 | **[YAKAP-Link](https://github.com/alfieprojectsdev/yakap-link)** | Civic tech for PhilHealth YAKAP program — transaction constraints and dispensing guard logic to prevent phantom claims | Active Dev |
 | **[PipetGo](https://github.com/alfieprojectsdev/pipetgo)** | B2B laboratory marketplace MVP connecting businesses with ISO-accredited testing labs; multi-tiered pricing (QUOTE/FIXED/HYBRID), role-based auth | In Production |
-| **Homebase** | Multi-residence household command center for ADHD executive function support — aggressive urgency system, recurring bill engine, heuristics anomaly detection, distributed notification loop | In Production |
+| **Homebase** | Multi-residence household command center for ADHD executive function support — aggressive urgency system, recurring bill engine, heuristics anomaly detection, distributed notification loop | Active Dev |
 | **[Carpool Coordinator](https://github.com/alfieprojectsdev/carpool-app)** | Community carpooling platform with schedule matching, vehicle details, interest tracking | Active Dev |
 | **[Washboard](https://github.com/alfieprojectsdev/washboard)** | Car wash queue system — contactless QR bookings, real-time receptionist dashboard, magic-link check-ins | Active Dev |
 
