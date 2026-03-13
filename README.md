@@ -1,79 +1,78 @@
-# webdevportfolio_ap - 🚧 Personal Projects (In Progress / Actively Maintained)
+# webdevportfolio_ap
 
-Welcome to my dev sandbox — a mix of real-world problem solving, family needs, and niche opportunities. Some projects are serious, some are scrappy, but all are hands-on learning experiences with practical goals.
+Personal portfolio site for Alfie Pelicano — Research Specialist & Geodetic Software Developer.
 
----
-
-## 🕵️‍♂️ JobHunter CLI
-
-**Stack**: Python (requests, BeautifulSoup, pandas)
-
-**What it is**: A command-line tool that scrapes company metadata and job postings from the open-source [`remoteintech/remote-jobs`](https://github.com/remoteintech/remote-jobs) repository.
-
-**Why**: To automate my own job search while also demonstrating scraping, crawling, and data automation skills in a clean portfolio-ready project.
-
-**Features**:
-- `scrape-metadata`: Extracts company names, websites, regions, remote status, and careers URLs into `companies.csv`.
-- `crawl-jobs`: Visits each careers page and scrapes job postings into `jobs.csv`.
-- Built for **local repo clones** (no ToS scraping issues).
-- Outputs structured CSV data for easy analysis or integration.
-
-**Status**: [Actively maintained](https://github.com/alfieprojectsdev/jobhunter), with plans to extend into ATS-specific crawlers (Greenhouse, Lever, Workable, etc.) and database-backed storage.
+**Live:** https://ithinkandicode.space
+**GitHub Pages:** https://alfieprojectsdev.github.io/webdevportfolio_ap/
 
 ---
 
-## 🚗 Condo Parking Booking App
+## About
 
-**Stack**: Next.js + Supabase
+I work at the intersection of earth science and software engineering — processing GNSS and geophysical data for earthquake research and fault monitoring at PHIVOLCS, while building the software to automate what shouldn't still be manual. 16+ years in scientific computing and spatial data.
 
-**What it is**: A booking system for residents to list and reserve condo parking slots with flexible time windows.
-
-**Why**: Inspired by real condo group chat behavior — lots of back-and-forth for temporary slots. This app formalizes that flow.
-
-**Features**:
-- Custom availability windows
-- Booking and slot listing
-- (Coming soon) Calendar view and in-app messaging
-
-**Status**: [Actively developed](https://github.com/alfieprojectsdev/parkboard), serving as my main portfolio project for learning full-stack web dev.
+> *"All models are wrong, but some are useful." — George E. P. Box*
 
 ---
 
-## 🔬 Lab Services Marketplace
+## Projects
 
-**What it is**: A web platform to help connect clients with science labs offering testing, analysis, or instrumentation services.
+### 🌋 Earth Science & Field Automation
 
-**Why**: Supporting my chemist sister’s startup idea. We're exploiting a niche — labs want more clients, clients want to find legit labs. Nobody’s doing this properly yet.
+| Project | Description | Status |
+|---|---|---|
+| **[MOVE Faults](https://github.com/alfieprojectsdev/movefaults)** | Flagship GNSS automation monorepo — Celery-backed distributed task queue, NMEA TCP streaming, offline React field app | Active Dev |
+| **[EIL Hazard Suite](https://github.com/alfieprojectsdev/eil-viz)** | Decoupled geohazard system: EIL-Calc headless spatial processing engine + EIL-Viz React ground-truth visualizer | Active Dev |
+| **[PHAST](https://github.com/alfieprojectsdev/phat)** | Chrome Extension injecting GIS controls into Leaflet maps; auto-generates official PHIVOLCS hazard assessment text | Active Dev |
+| **[SIPAT](https://github.com/alfieprojectsdev/sipat)** | Open-source CAPI alternative for field researchers — offline-first, complex survey logic, audio transcription | Active Dev |
+| **[Drive Archaeologist](https://github.com/alfieprojectsdev/drive-archaeologist)** | Python CLI for excavating and organizing legacy GNSS data (RINEX), deduplication, migration scripts | Active Dev |
 
-**Reality check**: This isn’t a flashy startup pitch. Just filling a market gap with practical tech.
+### 💻 Full-Stack Platforms & Civic Tech
 
-**Status**: In planning/[prototyping stage](https://github.com/alfieprojectsdev/pipetgo-mockup). Focus is on building a lean MVP.
+| Project | Description | Status |
+|---|---|---|
+| **[YAKAP-Link](https://github.com/alfieprojectsdev/yakap-link)** | Civic tech for PhilHealth YAKAP program — transaction constraints and dispensing guard logic to prevent phantom claims | Active Dev |
+| **[PipetGo](https://github.com/alfieprojectsdev/pipetgo)** | B2B laboratory marketplace MVP connecting businesses with ISO-accredited testing labs; multi-tiered pricing (QUOTE/FIXED/HYBRID), role-based auth | Active Dev (UAT) |
+| **Homebase** | Multi-tenant management system with custom heuristics engine for task urgency prediction and budget forecasting | Active Dev |
+| **[Carpool Coordinator](https://github.com/alfieprojectsdev/carpool-app)** | Community carpooling platform with schedule matching, vehicle details, interest tracking | In Production |
+| **[Washboard](https://github.com/alfieprojectsdev/washboard)** | Car wash queue system — contactless QR bookings, real-time receptionist dashboard, magic-link check-ins | In Production |
+
+### 🧮 Algorithms, Architecture & Utility
+
+| Project | Description | Status |
+|---|---|---|
+| **[UGT (Chaotic Circuits)](https://github.com/alfieprojectsdev/ugt)** | Python/LaTeX reconstruction of 2004 physics thesis — numerical solvers for Lyapunov Exponents in chaotic Sprott circuits | Complete |
+| **[Window Cards Generator](https://github.com/alfieprojectsdev/windowcards)** | Zero-dependency Vanilla JS constraint-solving engine for printable math worksheets; designed for classrooms with limited device access | In Production |
+| **[ArtPortfolio](https://github.com/alfieprojectsdev/artportfolio)** | High-performance statically generated Astro CMS for digital art commissions — minimal cognitive load, fast asset delivery | In Production |
+| **NightCoder Orchestrator** | ADR-to-patch automation engine using local LLMs (Ollama) — multi-agent planner/coder loop with safety-gated apply | Active Dev |
+| **SciWriter Orchestrator** | Research note to manuscript pipeline — draft/refine/terminology passes, LaTeX/Beamer export | Active Dev |
 
 ---
 
-## ➕ Math Operations Window Card Generator
+## Tech Stack
 
-**What it is**: A printable worksheet generator for multi-digit addition/subtraction/multiplication/division problems — optimized for SPED and early grade school use.
-
-**Why**: One of my kid’s teachers required window cards for the students. Buying fixed sets at bookstores wasn’t cost-effective. If there's a printer in school, why not generate custom ones?
-
-**Features**:
-- 4- to 6-digit addition, subtraction, multiplication and division problems
-- Adjustable font sizes (10x10 grid on A4 paper)
-- Visual separator between addends and answer line
-
-**Bonus**: Makes a decent case for budgeting a printer — even for underfunded schools. A single A4 sheet can serve up multiple problems per session, tailored to the day’s lesson. Print only what’s needed, when it’s needed — no waste, no bulk orders.
-
-**Status**: [Fully working](https://alfieprojectsdev.github.io/windowcards/) and in classroom use. Ongoing updates based on teacher feedback.
+**Frontend:** Next.js, React, Astro, TypeScript, Vanilla JS, Tailwind CSS
+**Backend:** Python/FastAPI, Node.js/Express, Celery, Redis, Docker, LangGraph/Ollama
+**Database:** PostgreSQL, Neon, Supabase, Prisma
+**Domain:** GNSS Processing, Spatial Geohazards, Heuristic Engines, Constraint Solving, Fortran
 
 ---
 
-## 🛠️ More to come…
+## Site
 
-These are the current builds on my workbench. Each one reflects a small piece of daily life — whether at home, at school, or in a niche science field. I'm always improving things based on real-world use and feedback.
+Static single-page site. No build tools, no frameworks.
+
+```
+index.html    # ~44KB — all content + inline JS
+styles.css    # ~14KB — CSS custom properties
+assets/       # screenshots
+cv/           # LaTeX CV pipeline (make build → docs/AlfiePelicano_CV_2025.pdf)
+```
+
+Deployed automatically to GitHub Pages on push to `main`.
 
 ---
 
-## 👤 Author
+## Author
 
-Alfie Pelicano -- I think and I code things | Bridging scientific workflows and modern web development
+Alfie Pelicano · [ithinkandicode.space](https://ithinkandicode.space) · alfieprojects.dev@gmail.com

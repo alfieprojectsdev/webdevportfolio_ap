@@ -257,6 +257,19 @@ body {
     margin-bottom: 48px;
 }
 
+.project-category {
+    margin-bottom: 4rem;
+}
+
+.project-category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -672,6 +685,10 @@ body {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .project-category-title {
+        font-size: 1.25rem;
     }
 
     .section-title {
