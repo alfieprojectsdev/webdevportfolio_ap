@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cv-pdf
-          path: docs/AlfiePelicano_CV_2025.pdf
+          path: docs/AlfiePelicano_CV_2026.pdf
           retention-days: 90
 
       - name: Commit and push PDF (if on main branch)
@@ -45,6 +45,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add docs/AlfiePelicano_CV_2025.pdf
+          git add docs/AlfiePelicano_CV_2026.pdf
           git diff --staged --quiet || git commit -m "chore: auto-update CV PDF [skip ci]"
           git push

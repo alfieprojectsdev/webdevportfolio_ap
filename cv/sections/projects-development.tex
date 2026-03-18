@@ -1,41 +1,36 @@
 %% Active Development Projects
 
-\cventry{2024--Present}{Drive Archaeologist -- GNSS Data Organization CLI}{\textit{Python 3.11+ · Click CLI · Rich Terminal · Pandas · Pytest}}{}{}{%
-Phase 1/4 implementation for excavating and organizing decades of legacy GNSS data from old drives with inconsistent structures.
+\cventry{2024--Present}{MOVE Faults \& EIL Hazard Suite}{\textit{Python · Celery · React · FastAPI · Docker}}{}{}{%
 \begin{itemize}
-\item RINEX file type detection with regex pattern matching
-\item MD5-based duplicate detection across drives
-\item Resume capability for long-running scans (progress tracking)
-\item Non-destructive by design (dry-run first, generate migration scripts)
-\item Designed for PHIVOLCS (Philippine Institute of Volcanology and Seismology)
+\item \textbf{MOVE Faults:} Flagship GNSS automation monorepo replacing legacy scripts. Features a Celery-backed distributed task queue, real-time NMEA TCP streaming, and an offline React field app.
+\item \textbf{EIL Hazard Suite:} Decoupled geohazard system featuring a headless spatial processing engine (EIL-Calc) for landslide susceptibility scoring and a React visualizer (EIL-Viz) for ground-truth validation.
 \end{itemize}
-\textbf{Target Users:} Geodesists, geophysicists managing legacy scientific archives\\
-\textbf{Repository:} \url{https://github.com/alfieprojectsdev/drive-archaeologist}
 }
 
 \vspace{0.5em}
 
-\cventry{2024--Present}{NightCoder Orchestrator -- ADR-to-Patch Automation}{\textit{Python 3.11+ · Ollama · deepseek-r1 (14B) · qwen2.5-coder (14B) · Shell Scripting}}{}{}{%
-Phase 3/4 production-ready multi-agent automation engine that reads Architecture Decision Records (ADRs), generates implementation plans, and produces git-style patches using local LLMs.
+\cventry{2024--Present}{Civic \& Utility Platforms}{\textit{Next.js 14 · TypeScript · PostgreSQL · Prisma / Drizzle}}{}{}{%
 \begin{itemize}
-\item Multi-agent workflow: ADR parsing → Plan synthesis → Patch generation
-\item Local LLM orchestration via Ollama (no API costs)
-\item 95\% plan quality, 90\% patch cleanliness (validated)
-\item Safety-gated workflow with error handling
-\item Portable configuration for cross-repo use
+\item \textbf{YAKAP-Link:} Civic tech POC with strict transaction constraints and dispensing guard logic to mitigate phantom claims in the PhilHealth medicine program.
+\item \textbf{Homebase:} ADHD-optimized household command center with heuristics for anomaly detection, distributed notification loops, and multi-residence bill tracking.
+\item \textbf{Washboard:} Contactless QR car wash booking system replacing manual pen-and-paper queue tracking with a real-time receptionist dashboard.
 \end{itemize}
-\textbf{Impact:} Recent optimizations achieved production-ready reliability for automated patch generation.
 }
 
 \vspace{0.5em}
 
-\cventry{2024--Present}{SciWriter Orchestrator -- Research Writing Pipeline}{\textit{Python 3.11+ · Ollama · qwen2.5 (3B Instruct) · LaTeX · Beamer}}{}{}{%
-Phase 2/4 automated writing pipeline converting research notes into structured drafts with refinement passes, terminology checks, and LaTeX export.
+\cventry{2024--Present}{Agentic Orchestrators (NightCoder \& SciWriter)}{\textit{Python 3.11+ · Ollama · Local LLMs · Shell Scripts}}{}{}{%
 \begin{itemize}
-\item Multi-stage workflow: draft → refine → terminology normalization → export
-\item LaTeX and Beamer slide generation
-\item Terminology database (JSON) for consistency
-\item Config-driven pipeline for customization
+\item \textbf{NightCoder:} ADR-to-patch automation engine utilizing local LLMs (deepseek-r1, qwen2.5-coder) to synthesize structured implementation plans and git-style patches.
+\item \textbf{SciWriter:} Config-driven writing pipeline that converts research notes into structured drafts with refinement passes, terminology normalization, and LaTeX/Beamer export.
 \end{itemize}
-\textbf{Status:} Pipeline functional, improving output consistency for academic paper generation.
+}
+
+\vspace{0.5em}
+
+\cventry{2024--Present}{Drive Archaeologist \& SIPAT}{\textit{Python · TypeScript · React · IndexedDB}}{}{}{%
+\begin{itemize}
+\item \textbf{Drive Archaeologist:} Python CLI for excavating legacy GNSS data. Detects RINEX files, flags MD5 duplicates, and generates safe migration scripts.
+\item \textbf{SIPAT:} Open-source CAPI alternative for field researchers needing offline-first data collection, complex branching logic, and automated audio transcription.
+\end{itemize}
 }

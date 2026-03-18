@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 MAIN_FILE="cv.tex"
 BUILD_DIR="build"
 OUTPUT_DIR="../docs"
-OUTPUT_FILE="AlfiePelicano_CV_2025.pdf"
+OUTPUT_FILE="AlfiePelicano_CV_2026.pdf"
 
 # Functions
 print_header() {

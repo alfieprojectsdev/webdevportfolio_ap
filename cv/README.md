@@ -3,7 +3,7 @@
 **Author:** Alfie R. Pelicano
 **Generated:** 2025-12-09
 **Template:** moderncv (classic style, blue color scheme)
-**Output:** `../docs/AlfiePelicano_CV_2025.pdf`
+**Output:** `../docs/AlfiePelicano_CV_2026.pdf`
 
 ---
 
@@ -60,10 +60,10 @@ cd cv/
 mkdir -p build
 pdflatex -output-directory=build cv.tex
 pdflatex -output-directory=build cv.tex  # Second pass for references
-cp build/cv.pdf ../docs/AlfiePelicano_CV_2025.pdf
+cp build/cv.pdf ../docs/AlfiePelicano_CV_2026.pdf
 ```
 
-**Output:** `../docs/AlfiePelicano_CV_2025.pdf`
+**Output:** `../docs/AlfiePelicano_CV_2026.pdf`
 
 ---
 
@@ -138,7 +138,7 @@ Edit `sections/experience.tex` and use the `\cventry` format.
 make build
 ```
 
-The updated PDF will be at `../docs/AlfiePelicano_CV_2025.pdf`.
+The updated PDF will be at `../docs/AlfiePelicano_CV_2026.pdf`.
 
 ---
 
@@ -239,7 +239,7 @@ Common issues:
 
 1. Clean build artifacts: `make clean`
 2. Rebuild: `make build`
-3. Check if file was overwritten: `ls -lh ../docs/AlfiePelicano_CV_2025.pdf`
+3. Check if file was overwritten: `ls -lh ../docs/AlfiePelicano_CV_2026.pdf`
 
 ### GitHub Actions Failing
 
@@ -248,6 +248,71 @@ Common issues:
    - LaTeX syntax errors (check locally first)
    - File encoding issues
    - Git push failures (check repository permissions)
+
+---
+
+## LaTeX Layout Tips
+
+### What is handled automatically
+
+| Concern | Status | How |
+|---|---|---|
+| PDF bookmarks / outline | Automatic | `hyperref` writes `cv.out` on pass 1, reads it on pass 2 |
+| Cross-reference resolution | Automatic | Two-pass `pdflatex` (both `make build` and `compile.sh` do this) |
+| Font size substitution warnings | Benign | moderncv uses a 34pt size not in CM Super; LaTeX substitutes silently |
+| Line breaking within entries | Automatic | Standard LaTeX paragraph handling |
+
+You do not need to add `\label`/`\ref` pairs or manually manage the PDF outline. The two-pass build is sufficient.
+
+### Orphaned section headers
+
+**The problem:** A `\section{}` heading lands at the bottom of a page while its content flows to the next — a visually broken orphan. moderncv has no built-in protection for this.
+
+**How to detect:** Rebuild and scroll through the PDF. If a heading appears at the bottom of a page with nothing below it, it needs intervention.
+
+**Fix A — force the section to the next page:**
+```latex
+% In cv.tex, before the offending \section{}:
+\pagebreak
+\section{Work Experience}
+```
+
+**Fix B — require minimum space before breaking (preferred):**
+```latex
+% Add to cv.tex preamble (once):
+\usepackage{needspace}
+
+% Then before any section at risk:
+\needspace{6\baselineskip}
+\section{Work Experience}
+```
+`\needspace{N\baselineskip}` only breaks the page if fewer than N lines remain — it's a no-op when there's enough room, so it's safe to apply proactively.
+
+**Current state:** The CV currently renders cleanly at 3 pages. No `\needspace` is applied. If content grows and an orphan appears, apply Fix B to the relevant section in `cv.tex`.
+
+### Section declaration locations
+
+Two patterns are used in the current source — both are valid:
+
+| File | Contains `\section{}` |
+|---|---|
+| `sections/summary.tex` | Yes (`Professional Summary`) |
+| `sections/skills.tex` | Yes (`Technical Skills`) |
+| `sections/experience.tex` | Yes (`Work Experience`) |
+| `sections/education.tex` | Yes (`Education`) |
+| `sections/projects-production.tex` | No — declared in `cv.tex` |
+| `sections/projects-development.tex` | No — declared in `cv.tex` |
+
+If you need `\needspace` before `Production Applications` or `Active Development Projects`, place it in `cv.tex` directly above the `\section{}` call.
+
+### Controlling spacing between entries
+
+Use `\vspace{}` between `\cventry` blocks (already in all section files):
+```latex
+\vspace{0.5em}   % between entries within a section
+\vspace{1em}     % between major sections (in cv.tex)
+```
+Avoid `\\` for spacing; use `\vspace` or `\medskip` instead.
 
 ---
 
@@ -404,7 +469,7 @@ Create `.git/hooks/pre-commit`:
 #!/bin/bash
 cd cv/
 make build
-git add ../docs/AlfiePelicano_CV_2025.pdf
+git add ../docs/AlfiePelicano_CV_2026.pdf
 ```
 
 Make it executable:
@@ -478,9 +543,7 @@ If you encounter problems:
 
 ### Questions
 
-For CV content questions, refer to:
-- `CV_UPDATE_RECOMMENDATIONS.md` (comprehensive update guide)
-- `PORTFOLIO_UPDATE_RECOMMENDATIONS.md` (portfolio sync guide)
+For CV content questions, refer to the troubleshooting section above or check `build/cv.log` directly.
 
 ---
 
@@ -490,6 +553,6 @@ This CV template and build system is customized for Alfie R. Pelicano. The moder
 
 ---
 
-**Last Updated:** 2025-12-09
+**Last Updated:** 2026-03-18
 **Maintained By:** Alfie R. Pelicano
 **Repository:** https://github.com/alfieprojectsdev/webdevportfolio_ap

@@ -66,7 +66,7 @@ Static single-page site. No build tools, no frameworks.
 index.html    # ~44KB — all content + inline JS
 styles.css    # ~14KB — CSS custom properties
 assets/       # screenshots
-cv/           # LaTeX CV pipeline (make build → docs/AlfiePelicano_CV_2025.pdf)
+cv/           # LaTeX CV pipeline (make build → docs/AlfiePelicano_CV_2026.pdf)
 ```
 
 Deployed automatically to GitHub Pages on push to `main`.

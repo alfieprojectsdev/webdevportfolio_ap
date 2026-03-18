@@ -8,17 +8,17 @@
 
 ```bash
 # 1. Install LaTeX (one-time, requires sudo password)
-cd /home/finch/repos/landingpage/cv
+cd cv/
 sudo bash INSTALL.sh
 
 # 2. Build your CV
 make build
 
 # 3. View the PDF
-xdg-open ../docs/AlfiePelicano_CV_2025.pdf
+xdg-open ../docs/AlfiePelicano_CV_2026.pdf
 ```
 
-**That's it!** Your CV is now at `/home/finch/repos/landingpage/docs/AlfiePelicano_CV_2025.pdf`
+**That's it!** Your CV is now at `docs/AlfiePelicano_CV_2026.pdf`
 
 ---
 
@@ -125,7 +125,7 @@ nano config/personal.tex                # Verify contact info
 make build
 
 # 3. Check the PDF
-xdg-open ../docs/AlfiePelicano_CV_2025.pdf
+xdg-open ../docs/AlfiePelicano_CV_2026.pdf
 
 # 4. Spell check (visually review PDF)
 
@@ -135,7 +135,7 @@ xdg-open ../docs/AlfiePelicano_CV_2025.pdf
 #    - Live demo links
 
 # 6. Save a dated copy
-cp ../docs/AlfiePelicano_CV_2025.pdf ~/Desktop/AlfiePelicano_CV_$(date +%Y%m%d).pdf
+cp ../docs/AlfiePelicano_CV_2026.pdf ~/Desktop/AlfiePelicano_CV_$(date +%Y%m%d).pdf
 ```
 
 ---
@@ -147,7 +147,7 @@ cp ../docs/AlfiePelicano_CV_2025.pdf ~/Desktop/AlfiePelicano_CV_$(date +%Y%m%d).
 make build
 
 # 2. Stage changes
-git add cv/ docs/AlfiePelicano_CV_2025.pdf
+git add cv/ docs/AlfiePelicano_CV_2026.pdf
 
 # 3. Commit with meaningful message
 git commit -m "feat(cv): add Washboard project to production section"
@@ -173,9 +173,8 @@ git push origin main
 ## 🆘 Need Help?
 
 1. **Full documentation:** `README.md` in this directory
-2. **Content guidance:** `CV_UPDATE_RECOMMENDATIONS.md` (parent directory)
-3. **LaTeX errors:** Check `build/cv.log` for details
-4. **Broken PDF:** Try `make clean && make build`
+2. **LaTeX errors:** Check `build/cv.log` for details
+3. **Broken PDF:** Try `make clean && make build`
 
 ---
 
@@ -184,5 +183,6 @@ git push origin main
 ---
 
 **Generated:** 2025-12-09
+**Last Updated:** 2026-03-18
 **Template:** moderncv classic (blue)
-**Output:** `../docs/AlfiePelicano_CV_2025.pdf`
+**Output:** `docs/AlfiePelicano_CV_2026.pdf`

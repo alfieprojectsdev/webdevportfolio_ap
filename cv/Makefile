@@ -30,10 +30,10 @@ build: clean
 	@echo "Build complete!"
 	@echo "========================================"
 	@mkdir -p $(OUTPUT_DIR)
-	@cp $(BUILD_DIR)/$(MAIN).pdf $(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf
-	@echo "PDF copied to: $(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf"
+	@cp $(BUILD_DIR)/$(MAIN).pdf $(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf
+	@echo "PDF copied to: $(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf"
 	@echo ""
-	@ls -lh $(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf
+	@ls -lh $(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf
 	@echo ""
 
 # Watch for changes and auto-rebuild
@@ -58,16 +58,16 @@ clean:
 # Deep clean (including output PDF)
 .PHONY: distclean
 distclean: clean
-	@rm -f $(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf
+	@rm -f $(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf
 	@echo "Deep clean complete."
 
 # View the generated PDF
 .PHONY: view
 view:
-	@if [ -f "$(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf" ]; then \
-		xdg-open $(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf 2>/dev/null || \
-		open $(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf 2>/dev/null || \
-		echo "Please open $(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf manually"; \
+	@if [ -f "$(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf" ]; then \
+		xdg-open $(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf 2>/dev/null || \
+		open $(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf 2>/dev/null || \
+		echo "Please open $(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf manually"; \
 	else \
 		echo "ERROR: PDF not found. Run 'make build' first."; \
 	fi
@@ -86,5 +86,5 @@ help:
 	@echo "  make watch      - Auto-rebuild on file changes (requires inotify-tools)"
 	@echo "  make help       - Show this help message"
 	@echo ""
-	@echo "Output: $(OUTPUT_DIR)/AlfiePelicano_CV_2025.pdf"
+	@echo "Output: $(OUTPUT_DIR)/AlfiePelicano_CV_2026.pdf"
 	@echo ""
