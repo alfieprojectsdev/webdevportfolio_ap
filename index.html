@@ -26,7 +26,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
     <!-- JSON-LD Structured Data -->
@@ -261,7 +261,7 @@
                     <article class="project-card" data-project="phast">
                         <div class="project-header">
                             <div class="project-icon">🗺️</div>
-                            <div class="project-status status-production">In Production</div>
+                            <div class="project-status status-active">Active Development</div>
                         </div>
                         <h3 class="project-title">PHAST</h3>
                         <p class="project-description">
@@ -288,6 +288,46 @@
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/alfieprojectsdev/phat" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="PHAST GitHub repository (opens in new tab)">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Code
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- HAR Automation Pipeline -->
+                    <article class="project-card" data-project="har-automation">
+                        <div class="project-header">
+                            <div class="project-icon">📋</div>
+                            <div class="project-status status-production">In Production</div>
+                        </div>
+                        <h3 class="project-title">HAR Automation Pipeline</h3>
+                        <p class="project-description">
+                            Python pipeline that automates PHIVOLCS Hazard Assessment Report generation — parsing multi-format OHAS data and producing official report text through a rule-based decision engine.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Problem:</span>
+                                <span class="detail-value">Hazard assessors spent hours manually drafting official HAR text from OHAS platform data — repetitive, error-prone, and inconsistent between authors.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Solution:</span>
+                                <span class="detail-value">A multi-format parser (clipboard tables, JSON, markdown, TSV) feeding a hazard-type-specific decision engine (earthquake, volcano, tsunami) that generates validated official assessment text from rule templates.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Impact:</span>
+                                <span class="detail-value">In internal use at PHIVOLCS; reduces HAR authoring from hours to seconds. Ships with a 20+ file validation corpus against real historical assessment data.</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Rule-Based Engine</span>
+                            <span class="tech-tag">Pytest</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/alfieprojectsdev/har-automation" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="HAR Automation Pipeline GitHub repository (opens in new tab)">
                                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
@@ -395,27 +435,28 @@
                         </div>
                         <h3 class="project-title">YAKAP-Link</h3>
                         <p class="project-description">
-                            Civic tech proof-of-concept addressing supply chain and dispensing bottlenecks in the PhilHealth YAKAP medicine program.
+                            Offline-first medicine inventory system for Philippine rural health units — with a redistribution Balancer that routes surplus stock before expiry and a Protocol-20k-Guard preventing phantom dispensing claims.
                         </p>
                         <div class="project-details">
                             <div class="detail-item">
                                 <span class="detail-label">Problem:</span>
-                                <span class="detail-value">The PhilHealth YAKAP program suffered from phantom claims and medicine shortages due to untracked dispensing and no transaction guard logic.</span>
+                                <span class="detail-value">The PhilHealth YAKAP program suffered from phantom claims and medicine shortages — untracked dispensing, no expiry-aware redistribution, and no guard logic for offline devices reconnecting with stale eligibility data.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Strict transaction constraints and dispensing guard logic to mitigate phantom claims, enforce availability checks, and ensure medicine reaches intended beneficiaries.</span>
+                                <span class="detail-value">Append-only offline ledger (RxDB) with a nightly Python Balancer that routes surplus stock using Days-of-Inventory thresholds before expiry. Protocol-20k-Guard enforces per-beneficiary dispensing limits with a 72-hour staleness cap for unsynced field devices.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Proof-of-concept — core constraint and dispensing logic implemented; pending stakeholder review for pilot deployment.</span>
+                                <span class="detail-value">Proof-of-concept — core dispensing guard and Balancer algorithm implemented; pending stakeholder review for RHU pilot deployment.</span>
                             </div>
                         </div>
                         <div class="tech-stack">
-                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
                             <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">RxDB</span>
+                            <span class="tech-tag">Python</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/alfieprojectsdev/yakap-link" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="YAKAP-Link GitHub repository (opens in new tab)">
@@ -469,6 +510,47 @@
                         </div>
                     </article>
 
+                    <!-- PipetGo V2 / pipetgo-core -->
+                    <article class="project-card" data-project="pipetgo-core">
+                        <div class="project-header">
+                            <div class="project-icon">🔬</div>
+                            <div class="project-status status-active">Active Development</div>
+                        </div>
+                        <h3 class="project-title">PipetGo V2</h3>
+                        <p class="project-description">
+                            Ground-up architectural rewrite of PipetGo — after V1 revealed three conflicting schema sources, an unenforced state machine, and an ambiguous PENDING status that meant different things across order types.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Problem:</span>
+                                <span class="detail-value">V1's monolith had three schema definitions out of sync, a state machine that existed only in comments, and a PENDING status used inconsistently between FIXED and QUOTE_REQUIRED order flows — making the codebase brittle as the domain grew.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Solution:</span>
+                                <span class="detail-value">Vertical Slice Architecture with one canonical Zod schema per entity enforced by ESLint, a mandatory state-machine.ts for all status transitions, and a domain kernel decoupled from Next.js. Eight feature slices planned before writing production code.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Stage:</span>
+                                <span class="detail-value">Foundation phase — domain kernel, enforced schemas, and state machine implemented. PayMongo (Philippine payment gateway) integration planned for this version.</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">Zod</span>
+                            <span class="tech-tag">Vertical Slice Architecture</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/alfieprojectsdev/pipetgo-core" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="PipetGo V2 GitHub repository (opens in new tab)">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Code
+                            </a>
+                        </div>
+                    </article>
+
                     <!-- Homebase -->
                     <article class="project-card" data-project="homebase">
                         <div class="project-header">
@@ -504,46 +586,7 @@
                         <!-- GitHub link intentionally hidden -->
                     </article>
 
-                    <!-- Carpool App -->
-                    <article class="project-card" data-project="carpool">
-                        <div class="project-header">
-                            <div class="project-icon">🚙</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">Carpool Coordinator</h3>
-                        <p class="project-description">
-                            A community carpooling platform that helps residents post and coordinate ride shares with live updates and vehicle info.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Carpool plans were managed in chat threads — easy to lose track of, and difficult to match riders by time or route.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">A structured posting system with schedule matching, vehicle details, and interest tracking for organized community rides.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Impact:</span>
-                                <span class="detail-value">Deployed on Render for a residential group; improved participation rates and reduced coordination time for parents and commuters.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Vanilla JS</span>
-                            <span class="tech-tag">Playwright</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/carpool-app" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Carpool Coordinator GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
+
 
                     <!-- Washboard -->
                     <article class="project-card" data-project="washboard">
@@ -610,7 +653,7 @@
                     <article class="project-card" data-project="ugt">
                         <div class="project-header">
                             <div class="project-icon">⚡</div>
-                            <div class="project-status status-active">Active Development</div>
+                            <div class="project-status status-production">Complete</div>
                         </div>
                         <h3 class="project-title">UGT (Chaotic Circuits)</h3>
                         <p class="project-description">
@@ -632,9 +675,8 @@
                         </div>
                         <div class="tech-stack">
                             <span class="tech-tag">Python</span>
+                            <span class="tech-tag">JAX</span>
                             <span class="tech-tag">NumPy</span>
-                            <span class="tech-tag">SciPy</span>
-                            <span class="tech-tag">Matplotlib</span>
                             <span class="tech-tag">LaTeX</span>
                         </div>
                         <div class="project-links">
@@ -801,6 +843,88 @@
                             <span class="tech-tag">Config-Driven Workflow</span>
                         </div>
                         <!-- GitHub link intentionally hidden -->
+                    </article>
+
+                    <!-- ProseProxy -->
+                    <article class="project-card" data-project="proseproxy">
+                        <div class="project-header">
+                            <div class="project-icon">📖</div>
+                            <div class="project-status status-production">In Production</div>
+                        </div>
+                        <h3 class="project-title">ProseProxy</h3>
+                        <p class="project-description">
+                            Self-hosted headless browser proxy that extracts clean content from aggressively monetized web novel platforms and serves it through a distraction-free local reading UI.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Problem:</span>
+                                <span class="detail-value">Web novel platforms are pop-up and login-wall mazes — extended reading sessions on mobile are unusable without a clean client.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Solution:</span>
+                                <span class="detail-value">Headless Playwright/Chromium extracts chapter content, caches it in SQLite, and serves it via a clean Next.js reading UI over Cloudflare Tunnel. A hybrid App Router + Pages Router split was required because Playwright and SQLite are incompatible with serverless/Edge runtimes.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Stage:</span>
+                                <span class="detail-value">Self-hosted, in daily personal use. The serverless incompatibility drove a deliberate infrastructure constraint — this can't be deployed to Vercel.</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Playwright</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Cloudflare Tunnel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/alfieprojectsdev/ProseProxy" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="ProseProxy GitHub repository (opens in new tab)">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Code
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- ISPHDB -->
+                    <article class="project-card" data-project="isphdb">
+                        <div class="project-header">
+                            <div class="project-icon">📡</div>
+                            <div class="project-status status-production">In Production</div>
+                        </div>
+                        <h3 class="project-title">ISPHDB</h3>
+                        <p class="project-description">
+                            Local network health monitor that differentiates between LAN bottlenecks, ISP gateway failures, and internet backbone outages — because those are three different problems requiring different responses.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Problem:</span>
+                                <span class="detail-value">Generic "check your router" advice fails because slow internet has three distinct root causes — and standard tools don't tell you which layer is broken.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Solution:</span>
+                                <span class="detail-value">Python prober pings three layered targets (local router → ISP gateway → 1.1.1.1) every 30 seconds, stores latency in SQLite, and fires OS-native alerts on congestion. Dynamic network auto-detection, TCP fallback for ICMP-blocking networks, Astro SSR dashboard with ECharts. Runs as a systemd service.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Stage:</span>
+                                <span class="detail-value">Self-hosted on personal infrastructure, running continuously. Cross-platform: systemd (Linux) and launchd (macOS) service configs included.</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Astro</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">ECharts</span>
+                            <span class="tech-tag">systemd</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/alfieprojectsdev/isphdb" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="ISPHDB GitHub repository (opens in new tab)">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Code
+                            </a>
+                        </div>
                     </article>
 
                 </div>
