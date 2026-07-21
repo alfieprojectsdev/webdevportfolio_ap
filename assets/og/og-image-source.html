@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #141412;
+    --paper: #f8f6f2;
+    --hero-bg: #191917;
+    --accent: #4a9fb0;
+    --ash: #9a958e;
+    --mist: #3a3835;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Instrument Sans', -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    background: var(--hero-bg);
+    color: var(--paper);
+    font-family: var(--font-body);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 88px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* faint contour-line motif, nods to the geodesy without being literal */
+  .rings {
+    position: absolute;
+    right: -180px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 760px;
+    height: 760px;
+    opacity: 0.13;
+  }
+  .rings circle { fill: none; stroke: var(--accent); stroke-width: 1.25; }
+  .content { position: relative; z-index: 1; max-width: 900px; }
+  h1 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 116px;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 26px;
+  }
+  .subtitle {
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 400;
+    color: #ddd8d1;
+    white-space: nowrap;
+    margin-bottom: 22px;
+    letter-spacing: 0.01em;
+  }
+  .rule {
+    width: 132px;
+    height: 1px;
+    background: var(--accent);
+    margin-bottom: 22px;
+    opacity: 0.85;
+  }
+  .tagline {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .url {
+    position: absolute;
+    left: 88px;
+    bottom: 54px;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    color: var(--ash);
+  }
+</style>
+</head>
+<body>
+  <svg class="rings" viewBox="0 0 760 760" aria-hidden="true">
+    <circle cx="380" cy="380" r="120"/>
+    <circle cx="380" cy="380" r="180"/>
+    <circle cx="380" cy="380" r="240"/>
+    <circle cx="380" cy="380" r="300"/>
+    <circle cx="380" cy="380" r="360"/>
+  </svg>
+  <div class="content">
+    <h1>Alfie Pelicano</h1>
+    <p class="subtitle">Research Specialist &amp; Geodetic Software Developer</p>
+    <div class="rule"></div>
+    <p class="tagline">Where tectonic data meets tractable software</p>
+  </div>
+  <p class="url">www.ithinkandicode.space</p>
+</body>
+</html>
