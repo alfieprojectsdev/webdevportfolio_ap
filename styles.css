@@ -365,6 +365,61 @@ body {
     gap: var(--sp-lg);
 }
 
+/* Compact "Also Built" list — secondary projects, one line each */
+.compact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--sp-md) var(--sp-lg);
+}
+
+.compact-item {
+    padding-bottom: var(--sp-md);
+    border-bottom: 1px solid var(--mist);
+    line-height: 1.55;
+}
+
+.compact-link {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+    text-decoration: none;
+    margin-bottom: 2px;
+    transition: color var(--dur-fast) var(--ease-out);
+}
+
+a.compact-link:hover,
+a.compact-link:focus-visible {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.compact-link-none {
+    color: var(--charcoal);
+}
+
+.compact-desc {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--ash);
+}
+
+/* Confidentiality note on client-work cards (no repo link) */
+.project-note {
+    margin-top: var(--sp-md);
+    padding-top: var(--sp-md);
+    border-top: 1px solid var(--mist);
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--ash);
+    line-height: 1.5;
+}
+
+
 .project-card {
     background: #ffffff;
     border-radius: 6px;
@@ -763,6 +818,10 @@ body {
    ============================================================ */
 
 @media (max-width: 768px) {
+    .compact-list {
+        grid-template-columns: 1fr;
+    }
+
     .nav-toggle {
         display: flex;
     }

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfie Pelicano - Research Specialist & Geodetic Software Developer</title>
-    <meta name="description" content="Research Specialist & Geodetic Software Developer with 16+ years in scientific computing and spatial data. Building automation pipelines, spatial data systems, and full-stack applications at the intersection of earth science and software engineering.">
+    <meta name="description" content="Research Specialist & Geodetic Software Developer. GNSS and geophysical data processing at PHIVOLCS, plus contract platform engineering — automation pipelines, geohazard systems, and full-stack applications.">
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Alfie Pelicano - Research Specialist & Geodetic Software Developer">
-    <meta property="og:description" content="16+ years in scientific computing and spatial data. Building GNSS automation pipelines, geohazard systems, and full-stack applications at the intersection of earth science and software engineering.">
+    <meta property="og:description" content="GNSS and geophysical data processing at PHIVOLCS, plus contract platform engineering. Automation pipelines, geohazard systems, and full-stack applications.">
     <meta property="og:url" content="https://ithinkandicode.space/">
     <meta property="og:image" content="https://ithinkandicode.space/og-image.png">
 
@@ -61,7 +61,7 @@
         "Heuristic Engines",
         "Constraint Solving"
       ],
-      "description": "Research Specialist & Geodetic Software Developer with 16+ years in scientific computing and spatial data, working at the intersection of earth science and software engineering."
+      "description": "Research Specialist & Geodetic Software Developer. GNSS and geophysical data processing at PHIVOLCS, plus contract platform engineering."
     }
     </script>
 </head>
@@ -99,13 +99,10 @@
                     <em>"All models are wrong, but some are useful." — George E. P. Box</em>
                 </p>
                 <p class="hero-description">
-                    I work at the intersection of earth science and software engineering — processing
-                    GNSS and geophysical data for earthquake research and fault monitoring, while
-                    building the software to automate what shouldn’t still be manual. With 16+ years
-                    in scientific computing and spatial data, I design headless processing pipelines,
-                    distributed task systems, and full-stack applications. I prefer minimalist,
-                    low-cognitive-load architecture: build to make impossible or tedious work tractable,
-                    not to flex a complex stack.
+                    I process GNSS and geophysical data at PHIVOLCS for earthquake research and
+                    fault monitoring. Most of what I build exists because some part of that work
+                    was still being done by hand — a folder of MS-DOS-era scripts, a spreadsheet
+                    passed around by email, a form somebody retypes every week.
                 </p>
                 <div class="hero-links">
                     <a href="https://github.com/alfieprojectsdev" target="_blank" class="btn btn-primary">
@@ -126,56 +123,112 @@
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-subtitle">Earth science automation, civic platforms, and algorithmic tools — built to make hard things tractable</p>
 
-            <!-- Parkboard - TEMPORARILY REMOVED (refactoring in progress)
-                <article class="project-card" data-project="parkboard">
-                    <div class="project-header">
-                        <div class="project-icon">🅿️</div>
-                        <div class="project-status status-production">In Production</div>
-                    </div>
-                    <h3 class="project-title">Parkboard</h3>
-                    <p class="project-description">
-                        A condo parking marketplace that lets residents list and book short-term parking slots with flexible schedules.
-                    </p>
-                    <div class="project-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Problem:</span>
-                            <span class="detail-value">Parking coordination was handled through chat groups — disorganized, error-prone, and time-consuming for both owners and renters.</span>
+            <!-- ================================================ -->
+            <!-- CATEGORY 1: Client & Production Work             -->
+            <!-- ================================================ -->
+            <div class="project-category">
+                <h3 class="project-category-title">💻 Platforms &amp; Production Work</h3>
+                <div class="projects-grid">
+
+                    <article class="project-card" data-project="pipetgo">
+                        <div class="project-header">
+                            <div class="project-icon">🔬</div>
+                            <div class="project-status status-production">In Production</div>
                         </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Solution:</span>
-                            <span class="detail-value">A real-time booking platform that centralizes availability, pricing, and schedules in one structured system, replacing manual coordination entirely.</span>
+                        <h3 class="project-title">PipetGo</h3>
+                        <p class="project-description">
+                            B2B laboratory marketplace MVP connecting businesses with ISO-accredited testing labs, with multi-tiered pricing and role-based authorization workflows.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Problem:</span>
+                                <span class="detail-value">Businesses had no centralized source for accredited labs — data was scattered, outdated, and often missing accreditation details.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Solution:</span>
+                                <span class="detail-value">A searchable marketplace with three pricing modes (QUOTE_REQUIRED, FIXED, HYBRID), multi-role authorization, and RFQ workflows connecting certified labs and clients directly.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Stage:</span>
+                                <span class="detail-value">MVP undergoing User Acceptance Testing with initial partner organizations before pilot deployment.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">V2 rewrite:</span>
+                                <span class="detail-value">V1 shipped and exposed three conflicting schema sources and an unenforced tenancy boundary; V2 is a ground-up rewrite on a single authoritative schema with tenancy enforced at the data layer.</span>
+                            </div>
                         </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Impact:</span>
-                            <span class="detail-value">Deployed in production for a residential community, enabling seamless short-term slot sharing and reducing admin workload.</span>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Next.js 14</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">NextAuth</span>
+                            <span class="tech-tag">Zod</span>
+                            <span class="tech-tag">Vitest</span>
                         </div>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Next.js 14</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Neon</span>
-                        <span class="tech-tag">Playwright</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/alfieprojectsdev/parkboard" target="_blank" class="project-link">
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            View Code
-                        </a>
-                    </div>
-                </article>
-            END Parkboard -->
+                        <div class="project-links">
+                            <a href="https://github.com/alfieprojectsdev/pipetgo" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="PipetGo GitHub repository (opens in new tab)">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Code
+                            </a>
+                            <a href="https://github.com/alfieprojectsdev/pipetgo-core" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="PipetGo V2 GitHub repository (opens in new tab)">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                V2 Rewrite
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-project="artportfolio">
+                        <div class="project-header">
+                            <div class="project-icon">🎨</div>
+                            <div class="project-status status-production">In Production</div>
+                        </div>
+                        <h3 class="project-title">ArtPortfolio</h3>
+                        <p class="project-description">
+                            High-performance statically generated Astro CMS built over a weekend — optimized for minimal cognitive load and fast asset delivery for digital art commissions.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Problem:</span>
+                                <span class="detail-value">Existing digital art commission sites were slow, cognitively noisy, or required ongoing CMS subscriptions — not practical for a solo artist portfolio.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Solution:</span>
+                                <span class="detail-value">Statically generated Astro site with zero client-side JS by default, optimized image delivery, and a content structure designed to minimize decision fatigue for commissioners.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Impact:</span>
+                                <span class="detail-value">In production as a live art commission site — fast, cost-free to host, and maintainable without a CMS subscription.</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Astro</span>
+                            <span class="tech-tag">Static Site Generation</span>
+                            <span class="tech-tag">GitHub Pages</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/alfieprojectsdev/artportfolio" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="ArtPortfolio GitHub repository (opens in new tab)">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                View Code
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
 
             <!-- ================================================ -->
-            <!-- CATEGORY 1: Earth Science & Field Automation     -->
+            <!-- CATEGORY 2: Earth Science & Field Automation     -->
             <!-- ================================================ -->
             <div class="project-category">
                 <h3 class="project-category-title">🌋 Earth Science &amp; Field Automation</h3>
                 <div class="projects-grid">
 
-                    <!-- MOVE Faults -->
                     <article class="project-card" data-project="move-faults">
                         <div class="project-header">
                             <div class="project-icon">🛰️</div>
@@ -217,7 +270,6 @@
                         </div>
                     </article>
 
-                    <!-- EIL Hazard Suite -->
                     <article class="project-card" data-project="eil-hazard-suite">
                         <div class="project-header">
                             <div class="project-icon">🌋</div>
@@ -248,171 +300,17 @@
                             <span class="tech-tag">Spatial Analysis</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/eil-viz" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="EIL Hazard Suite GitHub repository (opens in new tab)">
+                            <a href="https://github.com/alfieprojectsdev/eil-calc" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="EIL-Calc GitHub repository (opens in new tab)">
                                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
-                                View Code
+                                EIL-Calc
                             </a>
-                        </div>
-                    </article>
-
-                    <!-- PHAST -->
-                    <article class="project-card" data-project="phast">
-                        <div class="project-header">
-                            <div class="project-icon">🗺️</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">PHAST</h3>
-                        <p class="project-description">
-                            Chrome Extension command center that injects professional GIS controls into Leaflet maps and auto-generates official PHIVOLCS hazard assessment text.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">PHIVOLCS hazard assessors had no professional GIS controls in standard web mapping tools, requiring manual text authoring for every official assessment output.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">A Chrome Extension that injects GIS measurement and markup controls directly into Leaflet maps, then dynamically generates formatted official hazard text from map interactions.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Active development — core GIS injection and text generation functional; expanding to additional assessment templates.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Vanilla JS</span>
-                            <span class="tech-tag">Chrome Extension API</span>
-                            <span class="tech-tag">Leaflet.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/phat" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="PHAST GitHub repository (opens in new tab)">
+                            <a href="https://github.com/alfieprojectsdev/eil-viz" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="EIL-Viz GitHub repository (opens in new tab)">
                                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- HAR Automation Pipeline -->
-                    <article class="project-card" data-project="har-automation">
-                        <div class="project-header">
-                            <div class="project-icon">📋</div>
-                            <div class="project-status status-production">In Production</div>
-                        </div>
-                        <h3 class="project-title">HAR Automation Pipeline</h3>
-                        <p class="project-description">
-                            Python pipeline that automates PHIVOLCS Hazard Assessment Report generation — parsing multi-format OHAS data and producing official report text through a rule-based decision engine.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Hazard assessors spent hours manually drafting official HAR text from OHAS platform data — repetitive, error-prone, and inconsistent between authors.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">A multi-format parser (clipboard tables, JSON, markdown, TSV) feeding a hazard-type-specific decision engine (earthquake, volcano, tsunami) that generates validated official assessment text from rule templates.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Impact:</span>
-                                <span class="detail-value">In internal use at PHIVOLCS; reduces HAR authoring from hours to seconds. Ships with a 20+ file validation corpus against real historical assessment data.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">Rule-Based Engine</span>
-                            <span class="tech-tag">Pytest</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/har-automation" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="HAR Automation Pipeline GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- SIPAT -->
-                    <article class="project-card" data-project="sipat">
-                        <div class="project-header">
-                            <div class="project-icon">📋</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">SIPAT</h3>
-                        <p class="project-description">
-                            Open-source CAPI alternative to enterprise survey tools — built for field researchers who need offline-first data collection with complex survey logic.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Enterprise CAPI tools like SurveyToGo are expensive, closed-source, and impractical for field research teams operating in low-connectivity environments.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Offline-first data collection with complex branching survey logic, automated audio transcription workflows, and open data export — designed for field researchers, not enterprise procurement.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Active development — core offline collection and survey logic complete; transcription pipeline in integration.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">IndexedDB</span>
-                            <span class="tech-tag">Web Audio API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/sipat" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="SIPAT GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Drive Archaeologist -->
-                    <article class="project-card" data-project="drive-archaeologist">
-                        <div class="project-header">
-                            <div class="project-icon">📂</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">Drive Archaeologist</h3>
-                        <p class="project-description">
-                            Python CLI for excavating and organizing legacy GNSS (GPS) data from old drives with inconsistent file structures.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Decades of GNSS data scattered across drives: random directories, duplicates, and missing metadata — making retrieval and reuse difficult.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Automated scanner that detects GNSS file types (RINEX and others), extracts metadata, flags duplicates, recommends reorganization, and generates safe migration scripts.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Phase 1/4 — foundation scanning and classification; built for geodesists managing legacy scientific archives.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python 3.11+</span>
-                            <span class="tech-tag">Click CLI</span>
-                            <span class="tech-tag">Rich Terminal</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">Pytest</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/drive-archaeologist" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Drive Archaeologist GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
+                                EIL-Viz
                             </a>
                         </div>
                     </article>
@@ -421,513 +319,56 @@
             </div>
 
             <!-- ================================================ -->
-            <!-- CATEGORY 2: Full-Stack Platforms & Civic Tech    -->
+            <!-- Also Built (compact list)                        -->
             <!-- ================================================ -->
             <div class="project-category">
-                <h3 class="project-category-title">💻 Full-Stack Platforms &amp; Civic Tech</h3>
-                <div class="projects-grid">
-
-                    <!-- YAKAP-Link -->
-                    <article class="project-card" data-project="yakap-link">
-                        <div class="project-header">
-                            <div class="project-icon">🏥</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">YAKAP-Link</h3>
-                        <p class="project-description">
-                            Offline-first medicine inventory system for Philippine rural health units — with a redistribution Balancer that routes surplus stock before expiry and a Protocol-20k-Guard preventing phantom dispensing claims.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">The PhilHealth YAKAP program suffered from phantom claims and medicine shortages — untracked dispensing, no expiry-aware redistribution, and no guard logic for offline devices reconnecting with stale eligibility data.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Append-only offline ledger (RxDB) with a nightly Python Balancer that routes surplus stock using Days-of-Inventory thresholds before expiry. Protocol-20k-Guard enforces per-beneficiary dispensing limits with a 72-hour staleness cap for unsynced field devices.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Proof-of-concept — core dispensing guard and Balancer algorithm implemented; pending stakeholder review for RHU pilot deployment.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Vite</span>
-                            <span class="tech-tag">RxDB</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/yakap-link" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="YAKAP-Link GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- PipetGo (updated: MVP framing, status-active) -->
-                    <article class="project-card" data-project="pipetgo">
-                        <div class="project-header">
-                            <div class="project-icon">🔬</div>
-                            <div class="project-status status-production">In Production</div>
-                        </div>
-                        <h3 class="project-title">PipetGo</h3>
-                        <p class="project-description">
-                            B2B laboratory marketplace MVP connecting businesses with ISO-accredited testing labs, with multi-tiered pricing and role-based authorization workflows.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Businesses had no centralized source for accredited labs — data was scattered, outdated, and often missing accreditation details.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">A searchable marketplace with three pricing modes (QUOTE_REQUIRED, FIXED, HYBRID), multi-role authorization, and RFQ workflows connecting certified labs and clients directly.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">MVP undergoing User Acceptance Testing with initial partner organizations before pilot deployment.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Next.js 14</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Prisma</span>
-                            <span class="tech-tag">NextAuth</span>
-                            <span class="tech-tag">Zod</span>
-                            <span class="tech-tag">Vitest</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/pipetgo" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="PipetGo GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- PipetGo V2 / pipetgo-core -->
-                    <article class="project-card" data-project="pipetgo-core">
-                        <div class="project-header">
-                            <div class="project-icon">🔬</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">PipetGo V2</h3>
-                        <p class="project-description">
-                            Ground-up architectural rewrite of PipetGo — after V1 revealed three conflicting schema sources, an unenforced state machine, and an ambiguous PENDING status that meant different things across order types.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">V1's monolith had three schema definitions out of sync, a state machine that existed only in comments, and a PENDING status used inconsistently between FIXED and QUOTE_REQUIRED order flows — making the codebase brittle as the domain grew.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Vertical Slice Architecture with one canonical Zod schema per entity enforced by ESLint, a mandatory state-machine.ts for all status transitions, and a domain kernel decoupled from Next.js. Eight feature slices planned before writing production code.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Foundation phase — domain kernel, enforced schemas, and state machine implemented. PayMongo (Philippine payment gateway) integration planned for this version.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Prisma</span>
-                            <span class="tech-tag">Zod</span>
-                            <span class="tech-tag">Vertical Slice Architecture</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/pipetgo-core" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="PipetGo V2 GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Homebase -->
-                    <article class="project-card" data-project="homebase">
-                        <div class="project-header">
-                            <div class="project-icon">🏠</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">Homebase</h3>
-                        <p class="project-description">
-                            Multi-residence household command center built for ADHD executive function support — aggressive, context-aware reminders that catch what the brain won't.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Passive reminder apps fail ADHD brains — notifications are dismissible, don't understand context (which residence you're at), and never escalate urgency. The result: forgotten utility bills and missed maintenance with hard-to-reverse downstream consequences.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">ADHD-optimized urgency system (color-coded, impossible to ignore) with multi-residence bill tracking, recurring obligation engine, heuristics for anomaly detection and smart suggestions, chores management, and a distributed notification loop via daily cron with SMS fallback planned.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Phases 1 &amp; 2 complete — deployed on Vercel, 32 E2E tests passing, alpha testing with 5 family users. Distributed hexagonal architecture implemented for portability to self-hosted hardware (Phase 12+).</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Next.js 14</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Drizzle ORM</span>
-                            <span class="tech-tag">Neon (PostgreSQL)</span>
-                            <span class="tech-tag">Vercel Cron</span>
-                            <span class="tech-tag">Playwright</span>
-                        </div>
-                        <!-- GitHub link intentionally hidden -->
-                    </article>
-
-
-
-                    <!-- Washboard -->
-                    <article class="project-card" data-project="washboard">
-                        <div class="project-screenshot">
-                            <img
-                                src="assets/screenshots/washboard/dashboard-thumb.png"
-                                alt="Washboard dashboard showing real-time queue management with customer bookings"
-                                loading="lazy"
-                                width="600"
-                                height="400"
-                            >
-                        </div>
-                        <div class="project-header">
-                            <div class="project-icon">🚿</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">Washboard</h3>
-                        <p class="project-description">
-                            Car wash queue and booking system that replaces pen-and-paper operations with contactless QR bookings and a real-time dashboard.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Paper-based queue tracking offered zero visibility, required manual position management, and caused long waits during peak hours.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Contactless QR bookings combined with a receptionist dashboard that provides live queue updates, position reordering, magic-link check-ins, and status tracking.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Impact:</span>
-                                <span class="detail-value">Production-ready (130/130 tests passing, 94/100 security score); piloting with car wash operators to refine real-world workflows.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Next.js 14</span>
-                            <span class="tech-tag">React 19</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Passport.js</span>
-                            <span class="tech-tag">Vitest</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/washboard" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Washboard GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-
-            <!-- ================================================ -->
-            <!-- CATEGORY 3: Algorithms, Architecture & Utility   -->
-            <!-- ================================================ -->
-            <div class="project-category">
-                <h3 class="project-category-title">🧮 Algorithms, Architecture &amp; Utility</h3>
-                <div class="projects-grid">
-
-                    <!-- UGT (Chaotic Circuits) -->
-                    <article class="project-card" data-project="ugt">
-                        <div class="project-header">
-                            <div class="project-icon">⚡</div>
-                            <div class="project-status status-production">Complete</div>
-                        </div>
-                        <h3 class="project-title">UGT (Chaotic Circuits)</h3>
-                        <p class="project-description">
-                            Modern Python/LaTeX reconstruction of a 2004 physics undergraduate thesis — numerical solvers for Lyapunov Exponents in chaotic Sprott circuits.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Original 2004 thesis existed only in legacy formats with no reproducible computational environment or modern numerical tooling.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Full reconstruction with modern Python numerical solvers computing Lyapunov Exponents, phase portraits, and bifurcation diagrams for chaotic Sprott circuit systems. Published as reproducible LaTeX document.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Complete — solvers and LaTeX output published; serves as a reference implementation for chaos theory in physical circuits.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">JAX</span>
-                            <span class="tech-tag">NumPy</span>
-                            <span class="tech-tag">LaTeX</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/ugt" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="UGT Chaotic Circuits GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- Window Cards (updated: constraint-solving engine framing) -->
-                    <article class="project-card" data-project="windowcards">
-                        <div class="project-header">
-                            <div class="project-icon">➕</div>
-                            <div class="project-status status-production">In Production</div>
-                        </div>
-                        <h3 class="project-title">Window Cards Generator</h3>
-                        <p class="project-description">
-                            Zero-dependency Vanilla JS constraint-solving engine that dynamically generates printable math problem grids — designed for classrooms with limited device access.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Teachers needed customizable math materials without recurring costs from commercial workbook sets, usable on any device with no installation.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">A browser-based constraint solver that generates arithmetic worksheets with strict operational constraints on demand — printable, adjustable by range and operation type, with zero dependencies.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Impact:</span>
-                                <span class="detail-value">Used in SPED and early-grade classrooms — providing a free, flexible alternative to paid materials with no device or connectivity requirements.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Vanilla JS</span>
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Print CSS</span>
-                        </div>
-                        <div class="demo-link">
-                            <a href="https://alfieprojectsdev.github.io/windowcards/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Window Cards Generator live demo (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M13 3l3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"/>
-                                    <path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"/>
-                                </svg>
-                                Live Demo
-                            </a>
-                            <a href="https://github.com/alfieprojectsdev/windowcards" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Window Cards Generator GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- ArtPortfolio -->
-                    <article class="project-card" data-project="artportfolio">
-                        <div class="project-header">
-                            <div class="project-icon">🎨</div>
-                            <div class="project-status status-production">In Production</div>
-                        </div>
-                        <h3 class="project-title">ArtPortfolio</h3>
-                        <p class="project-description">
-                            High-performance statically generated Astro CMS built over a weekend — optimized for minimal cognitive load and fast asset delivery for digital art commissions.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Existing digital art commission sites were slow, cognitively noisy, or required ongoing CMS subscriptions — not practical for a solo artist portfolio.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Statically generated Astro site with zero client-side JS by default, optimized image delivery, and a content structure designed to minimize decision fatigue for commissioners.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Impact:</span>
-                                <span class="detail-value">In production as a live art commission site — fast, cost-free to host, and maintainable without a CMS subscription.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Astro</span>
-                            <span class="tech-tag">Static Site Generation</span>
-                            <span class="tech-tag">GitHub Pages</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/artportfolio" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="ArtPortfolio GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- NightCoder Orchestrator -->
-                    <article class="project-card" data-project="nightcoder">
-                        <div class="project-header">
-                            <div class="project-icon">🤖</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">NightCoder Orchestrator</h3>
-                        <p class="project-description">
-                            Python-based automation engine that reads ADRs, generates structured implementation plans, and produces git-style patches using local LLMs (via Ollama).
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Engineering tasks tied to ADRs required repetitive planning and manual patch authoring across multiple repos — slow, error-prone, and inconsistent.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">A multi-agent runner that scans ADRs, synthesizes a step-by-step plan, generates patches, logs runs, and optionally applies changes through a safety-gated workflow.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Phase 2/4 — stable planner/coder loop; refining patch validation and multi-repo robustness.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python 3.11+</span>
-                            <span class="tech-tag">Ollama</span>
-                            <span class="tech-tag">deepseek-r1 (1.5B)</span>
-                            <span class="tech-tag">qwen2.5-coder (1.5B)</span>
-                            <span class="tech-tag">Subprocess / Shell Scripts</span>
-                            <span class="tech-tag">Markdown ADR Parsing</span>
-                        </div>
-                        <!-- GitHub link intentionally hidden -->
-                    </article>
-
-                    <!-- SciWriter Orchestrator -->
-                    <article class="project-card" data-project="sciwriter">
-                        <div class="project-header">
-                            <div class="project-icon">📄</div>
-                            <div class="project-status status-active">Active Development</div>
-                        </div>
-                        <h3 class="project-title">SciWriter Orchestrator</h3>
-                        <p class="project-description">
-                            Automated writing pipeline that converts research notes into structured drafts — with refinement passes, terminology checks, LaTeX export, and optional slide generation.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Drafting scientific manuscripts from scratch is slow, inconsistent, and prone to terminology drift across revisions.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">A configurable multi-stage workflow that generates a draft, performs iterative refinement, normalizes terminology, and outputs LaTeX or slide formats.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Phase 2/4 — pipeline functional with draft/refine/terminology steps; improving LaTeX and slide output consistency.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python 3.11+</span>
-                            <span class="tech-tag">Ollama</span>
-                            <span class="tech-tag">qwen2.5 (3B Instruct)</span>
-                            <span class="tech-tag">Shell Script Pipeline</span>
-                            <span class="tech-tag">LaTeX / Beamer</span>
-                            <span class="tech-tag">Config-Driven Workflow</span>
-                        </div>
-                        <!-- GitHub link intentionally hidden -->
-                    </article>
-
-                    <!-- ProseProxy -->
-                    <article class="project-card" data-project="proseproxy">
-                        <div class="project-header">
-                            <div class="project-icon">📖</div>
-                            <div class="project-status status-production">In Production</div>
-                        </div>
-                        <h3 class="project-title">ProseProxy</h3>
-                        <p class="project-description">
-                            Self-hosted headless browser proxy that extracts clean content from aggressively monetized web novel platforms and serves it through a distraction-free local reading UI.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Web novel platforms are pop-up and login-wall mazes — extended reading sessions on mobile are unusable without a clean client.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Headless Playwright/Chromium extracts chapter content, caches it in SQLite, and serves it via a clean Next.js reading UI over Cloudflare Tunnel. A hybrid App Router + Pages Router split was required because Playwright and SQLite are incompatible with serverless/Edge runtimes.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Self-hosted, in daily personal use. The serverless incompatibility drove a deliberate infrastructure constraint — this can't be deployed to Vercel.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Playwright</span>
-                            <span class="tech-tag">SQLite</span>
-                            <span class="tech-tag">Cloudflare Tunnel</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/ProseProxy" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="ProseProxy GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                    <!-- ISPHDB -->
-                    <article class="project-card" data-project="isphdb">
-                        <div class="project-header">
-                            <div class="project-icon">📡</div>
-                            <div class="project-status status-production">In Production</div>
-                        </div>
-                        <h3 class="project-title">ISPHDB</h3>
-                        <p class="project-description">
-                            Local network health monitor that differentiates between LAN bottlenecks, ISP gateway failures, and internet backbone outages — because those are three different problems requiring different responses.
-                        </p>
-                        <div class="project-details">
-                            <div class="detail-item">
-                                <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Generic "check your router" advice fails because slow internet has three distinct root causes — and standard tools don't tell you which layer is broken.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Python prober pings three layered targets (local router → ISP gateway → 1.1.1.1) every 30 seconds, stores latency in SQLite, and fires OS-native alerts on congestion. Dynamic network auto-detection, TCP fallback for ICMP-blocking networks, Astro SSR dashboard with ECharts. Runs as a systemd service.</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Self-hosted on personal infrastructure, running continuously. Cross-platform: systemd (Linux) and launchd (macOS) service configs included.</span>
-                            </div>
-                        </div>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Astro</span>
-                            <span class="tech-tag">SQLite</span>
-                            <span class="tech-tag">ECharts</span>
-                            <span class="tech-tag">systemd</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/alfieprojectsdev/isphdb" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="ISPHDB GitHub repository (opens in new tab)">
-                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                View Code
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
+                <h3 class="project-category-title">🧰 Also Built</h3>
+                <ul class="compact-list">
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/har-automation" target="_blank" rel="noopener noreferrer" class="compact-link">HAR Automation Pipeline</a>
+                        <span class="compact-desc">Python pipeline automating PHIVOLCS Hazard Assessment Report generation from multi-format OHAS data.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/drive-archaeologist" target="_blank" rel="noopener noreferrer" class="compact-link">Drive Archaeologist</a>
+                        <span class="compact-desc">Python CLI for excavating and normalizing legacy GNSS data off drives with inconsistent structure.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/phat" target="_blank" rel="noopener noreferrer" class="compact-link">PHAST</a>
+                        <span class="compact-desc">Chrome extension injecting GIS controls into Leaflet maps and generating official PHIVOLCS hazard text.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/windowcards" target="_blank" rel="noopener noreferrer" class="compact-link">Window Cards Generator</a>
+                        <span class="compact-desc">Zero-dependency constraint solver that generates printable math drill grids — the first thing I built that other people used daily.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/sipat" target="_blank" rel="noopener noreferrer" class="compact-link">SIPAT</a>
+                        <span class="compact-desc">Open-source offline-first CAPI survey tool for field researchers.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/yakap-link" target="_blank" rel="noopener noreferrer" class="compact-link">YAKAP-Link</a>
+                        <span class="compact-desc">Offline-first medicine inventory and redistribution system for Philippine rural health units.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/isphdb" target="_blank" rel="noopener noreferrer" class="compact-link">ISPHDB</a>
+                        <span class="compact-desc">Local network monitor that separates LAN bottlenecks from gateway and upstream ISP failures.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/ugt" target="_blank" rel="noopener noreferrer" class="compact-link">UGT (Chaotic Circuits)</a>
+                        <span class="compact-desc">Python/LaTeX reconstruction of a 2004 undergraduate physics thesis — Lyapunov exponents and bifurcation solvers.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/washboard" target="_blank" rel="noopener noreferrer" class="compact-link">Washboard</a>
+                        <span class="compact-desc">Car wash queue and booking system replacing pen-and-paper operations with QR check-in.</span>
+                    </li>
+                    <li class="compact-item">
+                        <a href="https://github.com/alfieprojectsdev/ProseProxy" target="_blank" rel="noopener noreferrer" class="compact-link">ProseProxy</a>
+                        <span class="compact-desc">Self-hosted headless-browser proxy that extracts readable content from ad-heavy web novel platforms.</span>
+                    </li>
+                    <li class="compact-item">
+                        <span class="compact-link compact-link-none">Homebase</span>
+                        <span class="compact-desc">Multi-residence household command center built around ADHD executive-function support.</span>
+                    </li>
+                </ul>
             </div>
 
         </div>
@@ -1024,31 +465,27 @@
             <div class="about-content">
                 <p>
                     I work at PHIVOLCS processing GNSS and geophysical data for earthquake
-                    research and fault monitoring — and I build the software to automate what
-                    shouldn’t still be manual. The two roles aren’t separate: 16+ years of
-                    scientific computing taught me that precision, edge-case handling, and
-                    long-term maintainability aren’t engineering virtues, they’re survival
-                    requirements when your data tracks how the ground moves.
+                    research and fault monitoring, and I write the software that replaces the
+                    manual parts. The two roles aren’t separate: sixteen years of scientific
+                    computing taught me that precision, edge-case handling, and long-term
+                    maintainability aren’t engineering virtues, they’re survival requirements
+                    when your data tracks how the ground moves.
                 </p>
                 <p>
-                    My philosophy is simple: build things that solve <em>real problems</em>
-                    for <em>real people</em>. I don’t build for the sake of flexing a complex
-                    stack — I build to make impossible or tedious work tractable. No moonshot
-                    hype, no blockchain detours.
+                    Lately that sits alongside contract platform engineering — CI/CD, cloud
+                    deployment, and release gating for production systems. Different domain,
+                    same instinct: I’ve gotten suspicious of architectures I can’t still
+                    understand six months later. No moonshot hype, no blockchain detours.
                 </p>
                 <p>
-                    I believe in:
+                    In practice that means I write the test first when a bug is subtle, and
+                    skip it entirely when I’m still sketching. I keep READMEs a stranger could
+                    follow, on the theory that in six months I am the stranger. And I ship the
+                    boring version before finding out whether anyone wanted the interesting one.
                 </p>
-                <ul class="about-list">
-                    <li><strong>Test-driven development</strong> — if it’s not tested, it’s not done</li>
-                    <li><strong>Systematic problem-solving</strong> — big problems get smaller when you break them right</li>
-                    <li><strong>Clear documentation</strong> — your future self deserves clarity</li>
-                    <li><strong>Practical design</strong> — tech should help people, not just impress developers</li>
-                </ul>
                 <p>
-                    When I’m not writing code or processing fault data, I’m helping my kids
-                    with homework or automating something that probably didn’t need automating
-                    — because curiosity doesn’t switch off after work.
+                    Outside work I’m usually helping my kids with homework, or automating
+                    something that didn’t need automating.
                 </p>
             </div>
         </div>
