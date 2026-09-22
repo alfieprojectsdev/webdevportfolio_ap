@@ -188,26 +188,29 @@
                         </div>
                         <h3 class="project-title">ArtPortfolio</h3>
                         <p class="project-description">
-                            High-performance statically generated Astro CMS built over a weekend — optimized for minimal cognitive load and fast asset delivery for digital art commissions.
+                            Database-driven commission system for a working digital artist, live on its own domain since July 2026. Replaces the earlier static version.
                         </p>
                         <div class="project-details">
                             <div class="detail-item">
                                 <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Existing digital art commission sites were slow, cognitively noisy, or required ongoing CMS subscriptions — not practical for a solo artist portfolio.</span>
+                                <span class="detail-value">Commission requests arrived through Discord and Instagram DMs, with no record of what had been asked for, quoted, or accepted.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Statically generated Astro site with zero client-side JS by default, optimized image delivery, and a content structure designed to minimize decision fatigue for commissioners.</span>
+                                <span class="detail-value">Astro SSR with React islands, Postgres on Neon via Drizzle, Cloudinary for image delivery, Resend for mail, Playwright end to end. Requests are written to the database before any email is attempted, so a mail failure cannot lose one. Admin dashboard handles triage, pricing and status.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Impact:</span>
-                                <span class="detail-value">In production as a live art commission site — fast, cost-free to host, and maintainable without a CMS subscription.</span>
+                                <span class="detail-value">In production at dementedb.red, accepting commission requests directly. The database is the source of truth for every request received.</span>
                             </div>
                         </div>
                         <div class="tech-stack">
                             <span class="tech-tag">Astro</span>
-                            <span class="tech-tag">Static Site Generation</span>
-                            <span class="tech-tag">GitHub Pages</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Neon Postgres</span>
+                            <span class="tech-tag">Drizzle ORM</span>
+                            <span class="tech-tag">Cloudinary</span>
+                            <span class="tech-tag">Playwright</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/alfieprojectsdev/artportfolio" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="ArtPortfolio GitHub repository (opens in new tab)">
@@ -464,18 +467,12 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p>
-                    I work at PHIVOLCS processing GNSS and geophysical data for earthquake
-                    research and fault monitoring, and I write the software that replaces the
-                    manual parts. The two roles aren’t separate: sixteen years of scientific
-                    computing taught me that precision, edge-case handling, and long-term
-                    maintainability aren’t engineering virtues, they’re survival requirements
-                    when your data tracks how the ground moves.
+                    I work at PHIVOLCS processing GNSS and geophysical data for earthquake research and fault monitoring, and I write the software that replaces the manual parts. I have been there since 2009.
                 </p>
                 <p>
-                    Lately that sits alongside contract platform engineering — CI/CD, cloud
-                    deployment, and release gating for production systems. Different domain,
-                    same instinct: I’ve gotten suspicious of architectures I can’t still
-                    understand six months later. No moonshot hype, no blockchain detours.
+                    Alongside that I do contract platform engineering: CI/CD, cloud
+                    deployment, and release gating for production systems. I’ve gotten
+                    suspicious of architectures I can’t still understand six months later.
                 </p>
                 <p>
                     In practice that means I write the test first when a bug is subtle, and
