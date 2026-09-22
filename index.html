@@ -150,7 +150,7 @@
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Stage:</span>
-                                <span class="detail-value">MVP undergoing User Acceptance Testing with initial partner organizations before pilot deployment.</span>
+                                <span class="detail-value">MVP in user acceptance testing with initial partner organizations. Tests run against a real Postgres container rather than mocks, with a committed Playwright smoke as the browser-render gate before any PR touching shared UI.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">V2 rewrite:</span>
@@ -161,9 +161,10 @@
                             <span class="tech-tag">Next.js</span>
                             <span class="tech-tag">TypeScript</span>
                             <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">Neon Postgres</span>
                             <span class="tech-tag">NextAuth</span>
                             <span class="tech-tag">Zod</span>
-                            <span class="tech-tag">Vitest</span>
+                            <span class="tech-tag">Playwright</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/alfieprojectsdev/pipetgo" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="PipetGo GitHub repository (opens in new tab)">
@@ -245,28 +246,30 @@
                         </div>
                         <h3 class="project-title">MOVE Faults</h3>
                         <p class="project-description">
-                            Flagship GNSS automation monorepo replacing decades of fragmented legacy scripts with a modern distributed processing stack.
+                            GNSS automation monorepo for the PHIVOLCS network, taking raw receiver files through to reviewed station velocities. I'm lead developer on the software stack for MOVE Faults, a nationally funded project led by Dr Bacolcol.
                         </p>
                         <div class="project-details">
                             <div class="detail-item">
                                 <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Decades of fragmented MS-DOS/Bash GNSS processing scripts with no orchestration, no fault tolerance, and no field-usable interface.</span>
+                                <span class="detail-value">Network processing ran on decades of fragmented MS-DOS and Bash scripts. Orchestration, fault tolerance and field data capture were all handled by hand.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Solution:</span>
-                                <span class="detail-value">Celery-backed distributed task queue, real-time NMEA TCP streaming, and an offline-capable React field app for live fault monitoring operations.</span>
+                                <span class="detail-value">Celery and Redis ingestion handling Hatanaka decompression and MD5 deduplication into PostgreSQL with PostGIS and TimescaleDB. A Python wrapper drives Bernese non-interactively from Jinja2 templates. A real-time monitor reads NMEA 0183 over TCP, with a high-pass filter that corrects firmwares reporting velocity in the displacement field. Field crews log site visits in an offline PWA that generates its own UUIDs, so a submission over a bad connection cannot duplicate itself.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Active development — core task queue and streaming pipeline operational; field app in integration testing.</span>
+                                <span class="detail-value">Phased rollout. Geodetic database and documentation portal are done. Field ops, RINEX QC and the IGS downloader are in progress. The Bernese workflow has completed research and is being built.</span>
                             </div>
                         </div>
                         <div class="tech-stack">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Celery</span>
                             <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSQL</span>
                             <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Bernese</span>
                             <span class="tech-tag">Docker</span>
                         </div>
                         <div class="project-links">
@@ -286,26 +289,28 @@
                         </div>
                         <h3 class="project-title">EIL Hazard Suite</h3>
                         <p class="project-description">
-                            Decoupled geohazard system: a headless spatial processing engine for landslide susceptibility paired with a React-based ground-truth validator.
+                            Decoupled geohazard system: a headless Python engine that certifies land parcels against earthquake-induced landslide hazard, paired with a React app for reviewing the analysis behind each verdict.
                         </p>
                         <div class="project-details">
                             <div class="detail-item">
                                 <span class="detail-label">Problem:</span>
-                                <span class="detail-value">Geohazard susceptibility analysis required manual, error-prone GIS desktop workflows with no programmatic access or field validation tooling.</span>
+                                <span class="detail-value">Certifying a land parcel against earthquake-induced landslide hazard required manual GIS desktop work, with no programmatic access and no way for an assessor to check the reasoning behind a result.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Solution:</span>
-                                <span class="detail-value">EIL-Calc: headless spatial processing engine for landslide susceptibility scoring. EIL-Viz: React visualizer for overlaying and validating results against ground-truth field data.</span>
+                                <span class="detail-value">EIL-Calc takes a parcel polygon, resolves the best available elevation data (5 m IfSAR, 30 m SRTM as fallback) and runs two independent checks: how much ground inside the parcel sits above 16 degrees, and whether debris from the highest peak within about a kilometre could travel far enough to reach it. EIL-Viz renders the slope grid and the steepest-descent runout paths so an assessor can review the reasoning rather than just the verdict.</span>
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">Stage:</span>
-                                <span class="detail-value">Active development — EIL-Calc processing pipeline stable; EIL-Viz in active integration.</span>
+                                <span class="detail-value">EIL-Calc agrees with assessor ground truth on about 90% of 50 test parcels. An earlier version returned CERTIFIED SAFE when the analysis failed outright; it refuses to answer now.</span>
                             </div>
                         </div>
                         <div class="tech-stack">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">NumPy / SciPy</span>
                             <span class="tech-tag">React</span>
+                            <span class="tech-tag">Vite</span>
                             <span class="tech-tag">Spatial Analysis</span>
                         </div>
                         <div class="project-links">
@@ -334,16 +339,12 @@
                 <h3 class="project-category-title">🧰 Also Built</h3>
                 <ul class="compact-list">
                     <li class="compact-item">
-                        <a href="https://github.com/alfieprojectsdev/har-automation" target="_blank" rel="noopener noreferrer" class="compact-link">HAR Automation Pipeline</a>
-                        <span class="compact-desc">Python pipeline automating PHIVOLCS Hazard Assessment Report generation from multi-format OHAS data.</span>
-                    </li>
-                    <li class="compact-item">
                         <a href="https://github.com/alfieprojectsdev/drive-archaeologist" target="_blank" rel="noopener noreferrer" class="compact-link">Drive Archaeologist</a>
                         <span class="compact-desc">Python CLI for excavating and normalizing legacy GNSS data off drives with inconsistent structure.</span>
                     </li>
                     <li class="compact-item">
                         <a href="https://github.com/alfieprojectsdev/phat" target="_blank" rel="noopener noreferrer" class="compact-link">PHAST</a>
-                        <span class="compact-desc">Chrome extension injecting GIS controls into Leaflet maps and generating official PHIVOLCS hazard text.</span>
+                        <span class="compact-desc">Chrome extension for hazard assessors. Injects GIS controls into the assessment map, hands a drawn parcel to the EIL stack, and generates hazard report text from the assessment table as edited rather than from raw database values. Its rule engine maps section by section to a human-readable logic guide, so a policy change points at the file that implements it. Absorbs the earlier standalone HAR automation pipeline.</span>
                     </li>
                     <li class="compact-item">
                         <a href="https://github.com/alfieprojectsdev/windowcards" target="_blank" rel="noopener noreferrer" class="compact-link">Window Cards Generator</a>
