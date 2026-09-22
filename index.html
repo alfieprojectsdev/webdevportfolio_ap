@@ -154,11 +154,11 @@
                             </div>
                             <div class="detail-item">
                                 <span class="detail-label">V2 rewrite:</span>
-                                <span class="detail-value">V1 shipped and exposed three conflicting schema sources and an unenforced tenancy boundary; V2 is a ground-up rewrite on a single authoritative schema with tenancy enforced at the data layer.</span>
+                                <span class="detail-value">V1 shipped and exposed four structural problems that couldn't be fixed incrementally: three incompatible client schemas coexisting, a status transition guard defined but never called, pricing logic buried in a 32-line route-handler conditional, and one order status reachable by two paths with no way to tell them apart. V2 is a ground-up rewrite on vertical slices over a domain kernel under 300 lines, with the boundary enforced by an ESLint rule rather than by discipline.</span>
                             </div>
                         </div>
                         <div class="tech-stack">
-                            <span class="tech-tag">Next.js 14</span>
+                            <span class="tech-tag">Next.js</span>
                             <span class="tech-tag">TypeScript</span>
                             <span class="tech-tag">Prisma</span>
                             <span class="tech-tag">NextAuth</span>
@@ -218,6 +218,12 @@
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                                 View Code
+                            </a>
+                            <a href="https://dementedb.red" target="_blank" rel="noopener noreferrer" class="project-link demo-link" data-project="artportfolio" aria-label="ArtPortfolio live site at dementedb.red (opens in new tab)">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                                </svg>
+                                View Live Site
                             </a>
                         </div>
                     </article>
@@ -385,9 +391,9 @@
                 <div class="skill-category">
                     <h3 class="skill-category-title">Frontend</h3>
                     <ul class="skill-list">
-                        <li>Next.js 14 (App Router)</li>
-                        <li>React 19 (Server Components)</li>
-                        <li>Astro (Static Site Generation)</li>
+                        <li>Next.js (App Router)</li>
+                        <li>React (Server Components)</li>
+                        <li>Astro (SSR and static)</li>
                         <li>React / Vite</li>
                         <li>TypeScript</li>
                         <li>Vanilla JavaScript</li>
@@ -493,8 +499,8 @@
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
             <p class="contact-tagline">
-                Building something interesting? Need a developer who actually ships?<br>
-                Let's talk.
+                If you're hiring, or want to talk about something you're building,<br>
+                email is the best way to reach me.
             </p>
             <div class="contact-methods">
                 <a href="mailto:alfieprojects.dev@gmail.com" class="contact-link" aria-label="Email alfieprojects.dev@gmail.com">
@@ -516,7 +522,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Alfie Pelicano. Built with purpose (and a responsible amount of caffeine).</p>
+            <p>&copy; 2026 Alfie Pelicano. Built with purpose (and a responsible amount of caffeine).</p>
             <p class="privacy-note">
                 This site uses <a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a> for basic, privacy-friendly analytics (no cookies or personal data).
             </p>
